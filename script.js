@@ -4,13 +4,6 @@ const heroVideo = document.querySelector(".hero-visual video");
 const videoSoundToggle = document.querySelector(".video-sound-toggle");
 const languageOptions = document.querySelectorAll(".language-option");
 const servicePreviewVideos = document.querySelectorAll(".service-preview video");
-const contactDialog = document.querySelector("#contact-dialog");
-const contactDialogClose = document.querySelector(".contact-dialog-close");
-const bookingForm = document.querySelector("#booking-form");
-const bookingPhone = bookingForm.querySelector('[name="phone"]');
-const bookingServiceOptions = [...bookingForm.querySelectorAll('[name="services"]')];
-const bookingFormStatus = document.querySelector("#booking-form-status");
-const bookingWhatsAppLink = document.querySelector("#booking-whatsapp-link");
 const serviceMenuToggle = document.querySelector(".nav-service-toggle");
 const serviceMenu = document.querySelector("#services-menu");
 const serviceCards = document.querySelectorAll(".service-card[data-service-page]");
@@ -18,20 +11,21 @@ const serviceCards = document.querySelectorAll(".service-card[data-service-page]
 const translations = {
   hi: {
     pageTitle: "Apna Cleaning Service | सफाई और होम सर्विस, वाराणसी",
-    metaDescription: "Apna Cleaning Service — AC, fridge, washing machine, chimney, water tank, car interior और upholstery cleaning की भरोसेमंद सेवा। शिवपुर, वाराणसी में कॉल या WhatsApp करें।",
+    metaDescription: "Apna Cleaning Service — AC, फ्रिज, वॉशिंग मशीन, ओवन, चिमनी, कार, पानी की टंकी और सोफे की सफाई। शिवपुर, वाराणसी में कॉल या WhatsApp करें।",
     navigation: "मुख्य नेविगेशन",
     languageSelector: "भाषा चुनें",
     homeLink: "Apna Cleaning Service — होम",
     menuOpen: "मेन्यू खोलें",
     menuClose: "मेन्यू बंद करें",
     navHome: "होम",
+    navGallery: "गैलरी",
     navServices: "हमारी सेवाएं",
-    servicesDropdownHeading: "अपनी service चुनें",
+    servicesDropdownHeading: "अपनी सेवा चुनें",
     navAbout: "हमारे बारे में",
     navContact: "संपर्क करें",
-    heroTitleTop: "सफाई हो या सर्विस,",
-    heroTitleBottom: "अपना भरोसा चुनें।",
-    heroDescription: "घर, गाड़ी और appliances के लिए आसान और भरोसेमंद service — आपके दरवाज़े पर।",
+    heroTitleTop: "सफाई में भरोसा,",
+    heroTitleBottom: "अपनापन हर सेवा में।",
+    heroDescription: "घर, गाड़ी और घरेलू उपकरणों की सफाई के लिए भरोसेमंद सेवा — शिवपुर, वाराणसी में।",
     videoAc: "एयर कंडीशनर की सर्विस करते हुए",
     videoFridge: "फ्रिज की सफाई करते हुए",
     videoWasher: "वॉशिंग मशीन में कपड़े डालते हुए",
@@ -39,83 +33,110 @@ const translations = {
     videoCar: "कार की सीटों को वैक्यूम से साफ करते हुए",
     videoTank: "पूल की सफाई करते हुए — पानी की सफाई की झलक",
     videoUpholstery: "सोफे की upholstery साफ करते हुए",
+    videoSofa: "सोफे की सफाई करते हुए",
     bookWhatsapp: "WhatsApp पर बुक करें",
     callNow: "अभी कॉल करें",
-    heroPointHome: "घर पर service",
-    heroPointBooking: "आसान booking",
-    heroPointLocal: "लोकल टीम",
+    heroPointHome: "घर पर सेवा",
+    heroPointBooking: "आसान बुकिंग",
+    heroPointLocal: "स्थानीय सेवा",
+    heroBadgeHomeLabel: "सेवा",
+    heroBadgeHome: "घर पर, उपलब्धता अनुसार",
+    heroBadgeAreaLabel: "क्षेत्र",
+    heroBadgeArea: "शिवपुर, वाराणसी",
+    heroBadgeBookingLabel: "बुकिंग",
+    heroBadgeBooking: "WhatsApp पर पूछें",
+    heroHighlightsLabel: "सेवा की ज़रूरी जानकारी",
     whyChooseEyebrow: "आपकी सुविधा, हमारी प्राथमिकता",
-    whyChooseTitleLead: "सफाई की बुकिंग",
+    whyChooseTitleLead: "सफाई की सेवा",
     whyChooseTitleAccent: "आसान बनाएं",
-    whyChooseDescription: "अपनी ज़रूरत बताएं, ज़रूरी जानकारी पाएं और सेवा का समय सीधे कन्फर्म करें।",
+    whyChooseDescription: "अपनी ज़रूरत बताएं, जानकारी पाएं और उपलब्धता के अनुसार सेवा का समय तय करें।",
     whyChooseOneTitle: "सीधी और आसान बुकिंग",
-    whyChooseOneDescription: "कॉल या WhatsApp पर अपनी समस्या बताएं और उपलब्ध विकल्पों के बारे में पूछें।",
+    whyChooseOneDescription: "कॉल या WhatsApp पर अपनी ज़रूरत बताएं और उपलब्ध विकल्पों के बारे में पूछें।",
     whyChooseTwoTitle: "घर पर सेवा की सुविधा",
-    whyChooseTwoDescription: "उपलब्धता कन्फर्म होने पर अपनी बताई जगह पर विज़िट की जानकारी पाएं।",
+    whyChooseTwoDescription: "सेवा उपलब्ध होने पर अपने पते पर सफाई की सुविधा पाएं।",
     whyChooseThreeTitle: "पहले जानकारी, फिर बुकिंग",
-    whyChooseThreeDescription: "काम और संभावित शुल्क के बारे में पूछकर आगे बढ़ें; अंतिम जानकारी सेवा देखकर कन्फर्म होगी।",
-    whyChooseFourTitle: "वाराणसी की लोकल सेवा",
-    whyChooseFourDescription: "शिवपुर और आसपास के इलाके के लिए उपलब्धता सीधे हमसे कन्फर्म करें।",
+    whyChooseThreeDescription: "काम और अनुमानित शुल्क के बारे में पहले पूछें; अंतिम शुल्क काम देखकर तय होगा।",
+    whyChooseFourTitle: "वाराणसी की स्थानीय सेवा",
+    whyChooseFourDescription: "शिवपुर और आसपास के इलाके में उपलब्धता हमसे पूछें।",
+    galleryEyebrow: "हमारे काम की झलक",
+    galleryTitleLead: "हमारी",
+    galleryTitleAccent: "गैलरी",
+    gallerySofaVideo: "सोफा और कुर्सी की सफाई का वीडियो",
+    gallerySofaPhotoOne: "सोफे की सफाई",
+    gallerySofaPhotoTwo: "कुर्सी और कपड़े के फर्नीचर की सफाई",
+    galleryLabel: "सफाई सेवाओं की गैलरी",
+    galleryWasherPhoto: "वॉशिंग मशीन की सफाई",
+    galleryAcPhoto: "AC की सफाई",
+    galleryFridgePhoto: "फ्रिज की सफाई",
+    galleryChimneyPhoto: "चिमनी की सफाई",
     howItWorksEyebrow: "तीन आसान कदम",
     howItWorksTitleLead: "बुकिंग कैसे",
     howItWorksTitleAccent: "काम करती है?",
-    howItWorksDescription: "अपनी सेवा चुनें, हमसे बात करें और समय कन्फर्म करें।",
+    howItWorksDescription: "अपनी सेवा चुनें, हमसे बात करें और उपलब्धता के अनुसार समय तय करें।",
     howItWorksOneTitle: "अपनी सेवा चुनें",
-    howItWorksOneDescription: "AC, फ्रिज, कार इंटीरियर या सूची में दी गई दूसरी सेवा चुनें।",
+    howItWorksOneDescription: "AC, फ्रिज, कार के अंदरूनी हिस्से या सूची में दी गई दूसरी सेवा चुनें।",
     howItWorksTwoTitle: "कॉल या WhatsApp करें",
     howItWorksTwoDescription: "अपनी समस्या, जगह और सुविधाजनक समय बताएं।",
-    howItWorksThreeTitle: "जानकारी लेकर समय कन्फर्म करें",
-    howItWorksThreeDescription: "उपलब्धता और अनुमानित शुल्क पूछें; सहमति के बाद विज़िट कन्फर्म करें।",
+    howItWorksThreeTitle: "जानकारी लेकर समय तय करें",
+    howItWorksThreeDescription: "उपलब्धता और अनुमानित शुल्क पूछें; सहमति के बाद समय पक्का करें।",
     faqEyebrow: "आपके सवाल",
     faqTitleLead: "अक्सर पूछे जाने वाले",
     faqTitleAccent: "सवाल",
     faqDescription: "किसी और जानकारी के लिए हमें कॉल या WhatsApp करें।",
     faqBookingQuestion: "मैं सेवा कैसे बुक करूं?",
-    faqBookingAnswer: "अपनी सेवा बताने के लिए हमें कॉल या WhatsApp करें। उपलब्धता और समय की पुष्टि के बाद ही बुकिंग तय होगी।",
+    faqBookingAnswer: "अपनी ज़रूरत बताने के लिए हमें कॉल या WhatsApp करें। उपलब्धता और समय की पुष्टि के बाद बुकिंग तय होगी।",
     faqAreaQuestion: "आप किन इलाकों में सेवा देते हैं?",
-    faqAreaAnswer: "हम शिवपुर, वाराणसी और आसपास के इलाकों पर ध्यान देते हैं। अपने पते के लिए पहले हमसे उपलब्धता कन्फर्म करें।",
+    faqAreaAnswer: "हम शिवपुर, वाराणसी और आसपास के इलाकों में सेवा देते हैं। अपने पते के लिए पहले उपलब्धता पूछें।",
     faqServicesQuestion: "कौन-कौन सी सेवाएं उपलब्ध हैं?",
-    faqServicesAnswer: "वेबसाइट पर AC, फ्रिज, वॉशिंग मशीन, ओवन और चिमनी, कार इंटीरियर, वॉटर टैंक और upholstery सेवाएं दी गई हैं। उपलब्धता पूछ लें।",
+    faqServicesAnswer: "AC, फ्रिज, वॉशिंग मशीन, ओवन और चिमनी, कार के अंदरूनी हिस्से, पानी की टंकी, कुर्सी, सोफा और कपड़े के फर्नीचर की सफाई उपलब्ध है। अपने इलाके के लिए उपलब्धता पूछ लें।",
     faqPriceQuestion: "सेवा का शुल्क कितना होगा?",
-    faqPriceAnswer: "शुल्क सेवा और काम की स्थिति के अनुसार बदल सकता है। बुकिंग से पहले अनुमान पूछें और काम शुरू होने से पहले अंतिम शुल्क कन्फर्म करें।",
+    faqPriceAnswer: "शुल्क सेवा और काम की स्थिति के अनुसार बदल सकता है। बुकिंग से पहले अनुमान पूछें और काम शुरू होने से पहले अंतिम शुल्क तय करें।",
     faqTimingQuestion: "विज़िट का समय कैसे तय होगा?",
-    faqTimingAnswer: "अपना पसंदीदा समय बताएं। टीम की उपलब्धता कन्फर्म होने पर ही विज़िट का समय तय होगा।",
+    faqTimingAnswer: "अपना पसंदीदा समय बताएं। टीम की उपलब्धता की पुष्टि होने के बाद ही समय तय होगा।",
     videoDescription: "होम क्लीनिंग करते technician का वीडियो",
     soundOn: "आवाज़ चालू करें",
     soundOff: "आवाज़ बंद करें",
-    videoNoteTitle: "हर कोने की सफाई",
-    videoNoteSubtitle: "Care that feels like home",
+    videoNoteTitle: "साफ घर, सुकून भरा एहसास",
+    videoNoteSubtitle: "शिवपुर, वाराणसी और आसपास",
     floatingTitle: "आपके घर तक",
     heroBottomLeft: "आपका घर, हमारी ज़िम्मेदारी",
-    servicesEyebrow: "हम क्या करते हैं",
+    servicesEyebrow: "हमारी सेवाएं",
     servicesTitleLead: "आपकी ज़रूरत की",
-    servicesTitleAccent: "हर service",
-    servicesDescription: "सफाई और home appliance service — सब एक ही जगह। अपनी service चुनें और हमसे बात करें।",
-    reviewsEyebrow: "ग्राहक अनुभव",
-    reviewsTitleLead: "हमारे",
-    reviewsTitleAccent: "रिव्यू",
-    reviewsDemoNotice: "डेमो रिव्यू — ये वास्तविक ग्राहक समीक्षाएं नहीं हैं।",
-    reviewSampleTag: "नमूना · काल्पनिक",
-    reviewPrevious: "पिछला रिव्यू",
-    reviewNext: "अगला रिव्यू",
-    reviewRating: "5 में से 5 स्टार (नमूना)",
-    serviceAcTitle: "AC सर्विस",
-    serviceAcDescription: "AC की देखभाल और सर्विस, ताकि घर रहे ठंडा और आरामदायक।",
-    serviceFridgeTitle: "फ्रिज सर्विस",
-    serviceFridgeDescription: "फ्रिज की सर्विस के लिए मदद — समय और जानकारी के लिए कॉल करें।",
-    serviceWasherTitle: "वॉशिंग मशीन",
-    serviceWasherDescription: "वॉशिंग मशीन की सर्विस के लिए सुविधाजनक home visit बुक करें।",
-    serviceKitchenTitle: "ओवन और चिमनी",
-    serviceKitchenDescription: "किचन के oven और chimney की सर्विस व सफाई की सुविधा।",
-    serviceCarTitle: "कार इंटीरियर",
-    serviceCarDescription: "गाड़ी के अंदरूनी हिस्सों की सफाई से सफर बनाएं और भी fresh।",
-    serviceTankTitle: "वॉटर टैंक सफाई",
-    serviceTankDescription: "पानी की टंकी की सफाई के लिए अपनी booking पहले से तय करें।",
-    serviceUpholsteryTitle: "चेयर और upholstery",
-    serviceUpholsteryDescription: "चेयर और fabric surfaces की सफाई से घर को दें नया एहसास।",
-    serviceOtherTitle: "आपको चाहिए कोई और service?",
-    serviceOtherDescription: "अपनी ज़रूरत बताइए — हम उपलब्धता और जानकारी साझा करेंगे।",
-    bookingAsk: "विस्तार देखें",
+    servicesTitleAccent: "हर ज़रूरत के लिए",
+    servicesDescription: "घर, गाड़ी और घरेलू उपकरणों की सफाई के विकल्प। अपनी ज़रूरत के अनुसार सेवा चुनें और हमसे बात करें।",
+    serviceHighlightsEyebrow: "सेवा की जानकारी",
+    serviceHighlightsTitle: "लोकप्रिय सफाई सेवाएं",
+    highlightPrevious: "पिछली सेवा",
+    highlightNext: "अगली सेवा",
+    serviceAcTitle: "AC की सफाई",
+    serviceAcDescription: "AC की सफाई और उपलब्ध विकल्पों की जानकारी लें।",
+    serviceFridgeTitle: "फ्रिज की सफाई",
+    serviceFridgeDescription: "फ्रिज की अंदरूनी सफाई के विकल्पों के बारे में पूछें।",
+    serviceWasherTitle: "वॉशिंग मशीन की सफाई",
+    serviceWasherDescription: "वॉशिंग मशीन की सफाई और उपलब्धता की जानकारी लें।",
+    serviceKitchenTitle: "ओवन और चिमनी की सफाई",
+    serviceKitchenDescription: "रसोई के ओवन और चिमनी की सफाई के विकल्प जानें।",
+    serviceDeepCleaningTitle: "घर की गहरी सफाई",
+    serviceDeepCleaningDescription: "कमरों, फर्श, रसोई और बाथरूम की गहरी सफाई के विकल्प जानें।",
+    serviceApartmentTitle: "अपार्टमेंट की सफाई",
+    serviceApartmentDescription: "अपार्टमेंट के कमरों, रसोई और बाथरूम की सफाई के विकल्प पूछें।",
+    serviceFloorTitle: "फर्श की सफाई",
+    serviceFloorDescription: "टाइल, मार्बल और लकड़ी के फर्श की सफाई के विकल्प जानें।",
+    serviceGlassTitle: "कांच और खिड़की की सफाई",
+    serviceGlassDescription: "खिड़कियों, दरवाज़ों और कांच से धूल और दाग हटाने के विकल्प पूछें।",
+    serviceMoveTitle: "घर बदलने से पहले या बाद की सफाई",
+    serviceMoveDescription: "घर खाली करने या नए घर में जाने के समय पूरी सफाई के विकल्प पूछें।",
+    serviceCarTitle: "कार के अंदरूनी हिस्से की सफाई",
+    serviceCarDescription: "सीटों और कार के अंदरूनी हिस्सों की सफाई के विकल्प पूछें।",
+    serviceTankTitle: "पानी की टंकी की सफाई",
+    serviceTankDescription: "पानी की टंकी की सफाई की उपलब्धता और समय के बारे में पूछें।",
+    serviceUpholsteryTitle: "कुर्सी और कपड़े के फर्नीचर की सफाई",
+    serviceUpholsteryDescription: "कुर्सियों और कपड़े के फर्नीचर की सफाई के विकल्प जानें।",
+    serviceSofaTitle: "सोफे की सफाई",
+    serviceSofaDescription: "सोफे के कपड़े और स्थिति के अनुसार सफाई के विकल्प जानें।",
+    serviceOtherTitle: "कोई दूसरी सेवा चाहिए?",
+    serviceOtherDescription: "अपनी ज़रूरत बताएं — हम उपलब्धता और जानकारी साझा करेंगे।",
+    bookingAsk: "जानकारी देखें",
     talkToUs: "हमसे बात करें",
     howItWorksNav: "बुकिंग कैसे करें",
     faqNav: "अक्सर पूछे जाने वाले सवाल",
@@ -125,10 +146,10 @@ const translations = {
     aboutEyebrow: "Apna Cleaning Service · शिवपुर, वाराणसी",
     aboutTitleLead: "कराना रावत के साथ",
     aboutTitleAccent: "सफाई पर भरोसा।",
-    aboutDescription: "कराना रावत को सफाई और home appliance services के क्षेत्र में 10 वर्षों का अनुभव है। इसी अनुभव के साथ वे ग्राहकों को उनकी ज़रूरत के अनुसार सही सेवा समझने, उपलब्धता जानने और booking से पहले ज़रूरी जानकारी पाने में मदद करते हैं। Apna Cleaning Service के ज़रिए शिवपुर, वाराणसी और आसपास के घरों तक सुविधाजनक local service पहुँचाने की कोशिश है।",
+    aboutDescription: "कराना रावत को सफाई और घरेलू उपकरणों की सेवा के क्षेत्र में 10 वर्षों का अनुभव है। वे ग्राहकों को उनकी ज़रूरत के अनुसार सेवा समझने, उपलब्धता जानने और बुकिंग से पहले ज़रूरी जानकारी पाने में मदद करते हैं। Apna Cleaning Service के ज़रिए शिवपुर, वाराणसी और आसपास के घरों तक सुविधाजनक स्थानीय सेवा पहुँचाने की कोशिश है।",
     benefitOneTitle: "10 साल का व्यावहारिक अनुभव",
-    benefitOneDescription: "सफाई और home appliance service की ज़रूरतों की समझ।",
-    benefitTwoTitle: "पहले जानकारी, फिर booking",
+    benefitOneDescription: "सफाई और घरेलू उपकरणों की सेवा की ज़रूरतों की समझ।",
+    benefitTwoTitle: "पहले जानकारी, फिर बुकिंग",
     benefitTwoDescription: "सेवा, उपलब्धता और अनुमानित शुल्क के बारे में पूछें।",
     benefitThreeTitle: "लोकल सेवा",
     benefitThreeDescription: "शिवपुर, वाराणसी और आसपास के लिए।",
@@ -170,30 +191,33 @@ const translations = {
     whatsappContact: "WhatsApp करें",
     footerDescription: "आपके घर और रोज़मर्रा की ज़रूरतों के लिए, दिल से की गई service.",
     footerLocation: "शिवपुर, वाराणसी और आसपास",
-    quickLinks: "Quick Links",
+    quickLinks: "ज़रूरी लिंक",
     contactHeading: "हमसे संपर्क करें",
     contactPrompt: "बुकिंग और जानकारी के लिए कॉल करें",
     whatsappMessage: "WhatsApp पर मैसेज करें",
     copyright: "Apna Cleaning Service. All rights reserved.",
-    madeWithCare: "Made with care in Varanasi",
+    madeWithCare: "वाराणसी में स्नेह से निर्मित",
+    footerPrivacy: "गोपनीयता नीति",
+    footerTerms: "नियम और शर्तें",
     whatsappBooking: "WhatsApp पर बुकिंग करें",
     callBooking: "अभी कॉल करें: +91 92190 59563",
   },
   en: {
     pageTitle: "Apna Cleaning Service | Cleaning & Home Services, Varanasi",
-    metaDescription: "Trusted AC, refrigerator, washing machine, chimney, water tank, car interior and upholstery cleaning services in Shivpur, Varanasi. Call or WhatsApp Apna Cleaning Service.",
+    metaDescription: "AC, refrigerator, washing machine, oven, chimney, car interior, water tank, upholstery, and sofa cleaning in Shivpur, Varanasi. Contact Apna Cleaning Service.",
     navigation: "Main navigation",
     languageSelector: "Choose language",
     homeLink: "Apna Cleaning Service — Home",
     menuOpen: "Open menu",
     menuClose: "Close menu",
     navHome: "Home",
-    navServices: "Our Services",
+    navGallery: "Gallery",
+    navServices: "Our services",
     servicesDropdownHeading: "Choose a service",
     navAbout: "About Us",
     navContact: "Contact",
-    heroTitleTop: "Cleaning or servicing,",
-    heroTitleBottom: "choose a name you trust.",
+    heroTitleTop: "Care for your home,",
+    heroTitleBottom: "cleaning you can trust.",
     heroDescription: "Reliable, convenient service for your home, car and appliances — right at your doorstep.",
     videoAc: "Technician servicing an air conditioner",
     videoFridge: "Person cleaning a refrigerator",
@@ -202,11 +226,19 @@ const translations = {
     videoCar: "Vacuuming car seats",
     videoTank: "Pool cleaning footage — a water-cleaning preview",
     videoUpholstery: "People cleaning upholstered furniture",
+    videoSofa: "Cleaning a sofa",
     bookWhatsapp: "Book on WhatsApp",
     callNow: "Call Now",
     heroPointHome: "At-home service",
     heroPointBooking: "Easy booking",
     heroPointLocal: "Local team",
+    heroBadgeHomeLabel: "SERVICE",
+    heroBadgeHome: "At home, subject to availability",
+    heroBadgeAreaLabel: "AREA",
+    heroBadgeArea: "Shivpur, Varanasi",
+    heroBadgeBookingLabel: "BOOKING",
+    heroBadgeBooking: "Ask on WhatsApp",
+    heroHighlightsLabel: "Key service information",
     whyChooseEyebrow: "Your convenience comes first",
     whyChooseTitleLead: "Cleaning service,",
     whyChooseTitleAccent: "made simpler",
@@ -219,6 +251,17 @@ const translations = {
     whyChooseThreeDescription: "Ask about the work and estimated charges; confirm the final details after assessment.",
     whyChooseFourTitle: "Local Varanasi service",
     whyChooseFourDescription: "Contact us to confirm availability in Shivpur and nearby areas.",
+    galleryEyebrow: "Work in action",
+    galleryTitleLead: "Our",
+    galleryTitleAccent: "gallery",
+    gallerySofaVideo: "Sofa and chair cleaning video",
+    gallerySofaPhotoOne: "Sofa cleaning",
+    gallerySofaPhotoTwo: "Chair and upholstery cleaning",
+    galleryLabel: "Cleaning service gallery",
+    galleryWasherPhoto: "Washing machine cleaning",
+    galleryAcPhoto: "AC cleaning",
+    galleryFridgePhoto: "Refrigerator cleaning",
+    galleryChimneyPhoto: "Chimney cleaning",
     howItWorksEyebrow: "Three simple steps",
     howItWorksTitleLead: "How booking",
     howItWorksTitleAccent: "works",
@@ -238,7 +281,7 @@ const translations = {
     faqAreaQuestion: "Which areas do you serve?",
     faqAreaAnswer: "We focus on Shivpur, Varanasi, and nearby areas. Contact us to confirm availability for your address.",
     faqServicesQuestion: "Which services are available?",
-    faqServicesAnswer: "The website lists AC, refrigerator, washing machine, oven and chimney, car interior, water tank, and upholstery services. Please ask us to confirm availability.",
+    faqServicesAnswer: "We offer AC, refrigerator, washing machine, oven and chimney, car interior, water tank, chair and upholstery, and sofa cleaning. Please ask us to confirm availability in your area.",
     faqPriceQuestion: "How much will the service cost?",
     faqPriceAnswer: "Charges can vary by service and condition. Ask for an estimate before booking and confirm the final charge before work begins.",
     faqTimingQuestion: "How do I schedule a visit?",
@@ -254,28 +297,36 @@ const translations = {
     servicesTitleLead: "Every service",
     servicesTitleAccent: "you need",
     servicesDescription: "Cleaning and home appliance services — all in one place. Choose a service and get in touch.",
-    reviewsEyebrow: "Customer stories",
-    reviewsTitleLead: "What people",
-    reviewsTitleAccent: "say",
-    reviewsDemoNotice: "Demo reviews — these are not real customer testimonials.",
-    reviewSampleTag: "Sample · fictional",
-    reviewPrevious: "Previous review",
-    reviewNext: "Next review",
-    reviewRating: "5 out of 5 stars (sample)",
-    serviceAcTitle: "AC Service",
-    serviceAcDescription: "AC care and servicing to keep your home cool and comfortable.",
-    serviceFridgeTitle: "Refrigerator Service",
-    serviceFridgeDescription: "Get help with refrigerator servicing — call us for timings and details.",
-    serviceWasherTitle: "Washing Machine",
-    serviceWasherDescription: "Book a convenient home visit for washing machine servicing.",
-    serviceKitchenTitle: "Oven & Chimney",
-    serviceKitchenDescription: "Kitchen oven and chimney servicing and cleaning.",
-    serviceCarTitle: "Car Interior",
-    serviceCarDescription: "Make every drive feel fresher with a clean car interior.",
+    serviceHighlightsEyebrow: "Cleaning information",
+    serviceHighlightsTitle: "Our cleaning services",
+    highlightPrevious: "Previous service",
+    highlightNext: "Next service",
+    serviceAcTitle: "AC Cleaning",
+    serviceAcDescription: "Ask about AC cleaning options to help keep your home cool and comfortable.",
+    serviceFridgeTitle: "Refrigerator Cleaning",
+    serviceFridgeDescription: "Ask about interior refrigerator cleaning and care.",
+    serviceWasherTitle: "Washing Machine Cleaning",
+    serviceWasherDescription: "Ask about washing machine cleaning and availability.",
+    serviceKitchenTitle: "Oven & Chimney Cleaning",
+    serviceKitchenDescription: "Ask about cleaning options for your kitchen oven and chimney.",
+    serviceDeepCleaningTitle: "House Deep Cleaning",
+    serviceDeepCleaningDescription: "Ask about room-by-room deep cleaning for kitchens, bathrooms, and living spaces.",
+    serviceApartmentTitle: "Apartment Cleaning",
+    serviceApartmentDescription: "Ask about apartment-wide cleaning for rooms, kitchens, and bathrooms.",
+    serviceFloorTitle: "Floor Cleaning",
+    serviceFloorDescription: "Ask about tile, marble, and hardwood floor cleaning and finishing options.",
+    serviceGlassTitle: "Glass & Window Cleaning",
+    serviceGlassDescription: "Ask about window, glass, and frame cleaning for a brighter finish.",
+    serviceMoveTitle: "Move In / Move Out Cleaning",
+    serviceMoveDescription: "Ask about full reset and final cleaning for moving in or moving out.",
+    serviceCarTitle: "Car Interior Cleaning",
+    serviceCarDescription: "Ask about cleaning options for seats and interior surfaces.",
     serviceTankTitle: "Water Tank Cleaning",
     serviceTankDescription: "Schedule your water tank cleaning in advance.",
-    serviceUpholsteryTitle: "Chairs & Upholstery",
-    serviceUpholsteryDescription: "Refresh your home with clean chairs and fabric surfaces.",
+    serviceUpholsteryTitle: "Chair & Upholstery Cleaning",
+    serviceUpholsteryDescription: "Ask about cleaning options for chairs and fabric surfaces.",
+    serviceSofaTitle: "Sofa Cleaning",
+    serviceSofaDescription: "Ask about cleaning options based on your sofa's fabric and condition.",
     serviceOtherTitle: "Need another service?",
     serviceOtherDescription: "Tell us what you need — we’ll share availability and details.",
     bookingAsk: "View details",
@@ -339,65 +390,109 @@ const translations = {
     whatsappMessage: "Message us on WhatsApp",
     copyright: "Apna Cleaning Service. All rights reserved.",
     madeWithCare: "Made with care in Varanasi",
+    footerPrivacy: "Privacy Policy",
+    footerTerms: "Terms and Conditions",
     whatsappBooking: "Book on WhatsApp",
     callBooking: "Call now: +91 92190 59563",
   },
 };
 
-const demoReviews = {
+const serviceHighlights = {
   hi: [
     {
-      quote: "सैंपल: AC सर्विस की बुकिंग आसान रही और टीम समय पर पहुंची।",
-      name: "आरव शर्मा",
-      service: "AC सर्विस",
+      description: "कार इंटीरियर क्लीनिंग में सीटों और अंदरूनी हिस्सों की सफाई के विकल्प पूछें।",
+      name: "कार इंटीरियर क्लीनिंग",
     },
     {
-      quote: "सैंपल: फ्रिज की सफाई अच्छी लगी और काम के बारे में साफ जानकारी मिली।",
-      name: "नेहा सिंह",
-      service: "फ्रिज सर्विस",
+      description: "AC क्लीनिंग के विकल्प और उपलब्धता बुकिंग से पहले कन्फर्म करें।",
+      name: "AC क्लीनिंग",
     },
     {
-      quote: "सैंपल: कार की सीटों की सफाई के बाद इंटीरियर काफी बेहतर लगा।",
-      name: "रोहन वर्मा",
-      service: "कार इंटीरियर सफाई",
+      description: "फ्रिज की अंदरूनी सफाई और देखभाल के विकल्पों के बारे में जानें।",
+      name: "फ्रिज क्लीनिंग",
+    },
+    {
+      description: "वॉशिंग मशीन की सफाई और उपलब्धता की जानकारी लें।",
+      name: "वॉशिंग मशीन क्लीनिंग",
+    },
+    {
+      description: "सोफा क्लीनिंग के विकल्प और अनुमानित शुल्क के बारे में पूछें।",
+      name: "सोफा क्लीनिंग",
+    },
+    {
+      description: "घर की deep cleaning के काम और उपलब्धता की जानकारी लें।",
+      name: "हाउस डीप क्लीनिंग",
     },
   ],
   en: [
     {
-      quote: "Sample: Booking the AC service was easy, and the team arrived on time.",
-      name: "Aarav Sharma",
-      service: "AC service",
+      description: "Ask about cleaning the seats and interior surfaces with car interior cleaning.",
+      name: "Car Interior Cleaning",
     },
     {
-      quote: "Sample: The refrigerator cleaning was good, and the service details were clear.",
-      name: "Neha Singh",
-      service: "Refrigerator service",
+      description: "Check AC cleaning options and availability before booking.",
+      name: "AC Cleaning",
     },
     {
-      quote: "Sample: The car interior felt much fresher after the seat cleaning.",
-      name: "Rohan Verma",
-      service: "Car interior cleaning",
+      description: "Ask about refrigerator interior cleaning and care options.",
+      name: "Refrigerator Cleaning",
+    },
+    {
+      description: "Get information about washing machine cleaning and availability.",
+      name: "Washing Machine Cleaning",
+    },
+    {
+      description: "Ask about sofa cleaning options and an estimated price.",
+      name: "Sofa Cleaning",
+    },
+    {
+      description: "Get information about the scope and availability of deep house cleaning.",
+      name: "House Deep Cleaning",
     },
   ],
 };
 
-let activeReviewIndex = 0;
+let activeHighlightIndex = 0;
+let highlightIntervalId = null;
+const HIGHLIGHT_INTERVAL_MS = 18000;
+const highlightDescription = document.querySelector("#service-highlight-description");
+const highlightDescriptionCopy = document.querySelector("#service-highlight-copy");
 
-function renderReview() {
-  const reviews = demoReviews[document.documentElement.lang === "en" ? "en" : "hi"];
-  const review = reviews[activeReviewIndex];
-  document.querySelector("#review-quote").textContent = review.quote;
-  document.querySelector("#review-name").textContent = review.name;
-  document.querySelector("#review-service").textContent = review.service;
-  document.querySelector("#review-avatar").textContent = review.name.charAt(0);
-  document.querySelector("#review-count").textContent =
-    `${activeReviewIndex + 1} / ${reviews.length}`;
+function getCurrentHighlights() {
+  return serviceHighlights[document.documentElement.lang === "en" ? "en" : "hi"];
 }
 
-function moveReview(direction) {
-  const totalReviews = demoReviews.hi.length;
-  activeReviewIndex = (activeReviewIndex + direction + totalReviews) % totalReviews;
-  renderReview();
+function renderHighlight() {
+  const highlights = getCurrentHighlights();
+  const highlight = highlights[activeHighlightIndex];
+  highlightDescription.textContent = highlight.description;
+  highlightDescriptionCopy.textContent = highlight.description;
+  document.querySelector("#service-highlight-name").textContent = highlight.name;
+  document.querySelector("#highlight-count").textContent =
+    `${activeHighlightIndex + 1} / ${highlights.length}`;
+}
+
+function moveHighlight(direction) {
+  const highlights = getCurrentHighlights();
+  activeHighlightIndex = (activeHighlightIndex + direction + highlights.length) % highlights.length;
+  renderHighlight();
+}
+
+function startHighlightRotation() {
+  if (highlightIntervalId || reducedMotionPreference.matches || document.hidden) return;
+
+  highlightIntervalId = window.setInterval(() => {
+    if (!serviceHighlightCard.contains(document.activeElement)) {
+      moveHighlight(1);
+    }
+  }, HIGHLIGHT_INTERVAL_MS);
+}
+
+function stopHighlightRotation() {
+  if (highlightIntervalId) {
+    window.clearInterval(highlightIntervalId);
+    highlightIntervalId = null;
+  }
 }
 
 function setLanguage(language) {
@@ -446,7 +541,8 @@ function setLanguage(language) {
   videoSoundToggle.querySelector("span").textContent = heroVideo.muted
     ? messages.soundOn
     : messages.soundOff;
-  renderReview();
+  renderHighlight();
+  startHighlightRotation();
 
   languageOptions.forEach((option) => {
     const isActive = option.dataset.language === language;
@@ -518,66 +614,6 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && !serviceMenu.hidden) closeServicesMenu(true);
 });
 
-document.addEventListener("click", (event) => {
-  const contactLink = event.target.closest("[data-open-contact]");
-  if (!contactLink) return;
-
-  event.preventDefault();
-  if (!contactDialog.open) contactDialog.showModal();
-});
-
-contactDialogClose.addEventListener("click", () => contactDialog.close());
-contactDialog.addEventListener("click", (event) => {
-  if (event.target === contactDialog) contactDialog.close();
-});
-
-bookingServiceOptions.forEach((option) => {
-  option.addEventListener("change", () => {
-    bookingServiceOptions[0].setCustomValidity("");
-  });
-});
-
-bookingForm.addEventListener("input", () => {
-  bookingPhone.setCustomValidity("");
-  bookingFormStatus.hidden = true;
-  bookingWhatsAppLink.hidden = true;
-  bookingWhatsAppLink.removeAttribute("href");
-});
-
-bookingForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const messages = translations[document.documentElement.lang];
-  const selectedServices = bookingServiceOptions
-    .filter((option) => option.checked)
-    .map((option) => option.closest("label").querySelector("[data-i18n]").textContent.trim());
-  const phoneDigits = bookingPhone.value.replace(/\D/g, "");
-
-  bookingServiceOptions[0].setCustomValidity(
-    selectedServices.length ? "" : messages.bookingServicesRequired,
-  );
-  bookingPhone.setCustomValidity(
-    phoneDigits.length >= 10 && phoneDigits.length <= 13 ? "" : messages.bookingPhoneInvalid,
-  );
-  if (!bookingForm.reportValidity()) return;
-
-  const formData = new FormData(bookingForm);
-  const details = String(formData.get("details") || "").trim();
-  const messageLines = [
-    messages.bookingMessageGreeting,
-    `${messages.bookingMessageName}: ${String(formData.get("name")).trim()}`,
-    `${messages.bookingMessagePhone}: ${String(formData.get("phone")).trim()}`,
-    `${messages.bookingMessageServices}: ${selectedServices.join(", ")}`,
-    `${messages.bookingMessageAddress}: ${String(formData.get("address")).trim()}`,
-  ];
-  if (details) messageLines.push(`${messages.bookingMessageDetails}: ${details}`);
-
-  const whatsappUrl = `https://wa.me/919219059563?text=${encodeURIComponent(messageLines.join("\n"))}`;
-  bookingWhatsAppLink.href = whatsappUrl;
-  bookingWhatsAppLink.hidden = false;
-  bookingFormStatus.hidden = false;
-  window.open(whatsappUrl, "_blank", "noopener,noreferrer");
-});
-
 videoSoundToggle.addEventListener("click", async () => {
   heroVideo.muted = !heroVideo.muted;
   videoSoundToggle.setAttribute("aria-pressed", String(!heroVideo.muted));
@@ -597,9 +633,25 @@ languageOptions.forEach((option) => {
   option.addEventListener("click", () => setLanguage(option.dataset.language));
 });
 
-const reviewCard = document.querySelector(".review-card");
-document.querySelector("#review-previous").addEventListener("click", () => moveReview(-1));
-document.querySelector("#review-next").addEventListener("click", () => moveReview(1));
+const serviceHighlightCard = document.querySelector(".service-highlight-card");
+document.querySelector("#highlight-previous").addEventListener("click", () => {
+  moveHighlight(-1);
+  stopHighlightRotation();
+  startHighlightRotation();
+});
+document.querySelector("#highlight-next").addEventListener("click", () => {
+  moveHighlight(1);
+  stopHighlightRotation();
+  startHighlightRotation();
+});
+
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) {
+    stopHighlightRotation();
+  } else {
+    startHighlightRotation();
+  }
+});
 
 servicePreviewVideos.forEach((video) => {
   video.addEventListener("error", () => {
@@ -625,19 +677,90 @@ const updateServicePreviewMotion = () => {
 
 updateServicePreviewMotion();
 reducedMotionPreference.addEventListener("change", updateServicePreviewMotion);
+reducedMotionPreference.addEventListener("change", () => {
+  if (reducedMotionPreference.matches) {
+    stopHighlightRotation();
+  } else {
+    startHighlightRotation();
+  }
+});
 
 document.querySelector("#year").textContent = new Date().getFullYear();
 
+const galleryCards = document.querySelectorAll(".gallery-card");
+const galleryModal = document.querySelector("#gallery-modal");
+const galleryModalImage = document.querySelector("#gallery-modal-image");
+const galleryModalVideo = document.querySelector("#gallery-modal-video");
+const galleryModalTitle = document.querySelector("#gallery-modal-title");
+const galleryCloseButton = document.querySelector(".gallery-modal-close");
+
+function openGalleryMedia(mediaSrc, title, mediaType = "image", poster = "") {
+  galleryModalVideo.pause();
+  galleryModalVideo.hidden = mediaType !== "video";
+  galleryModalImage.hidden = mediaType === "video";
+  galleryModalTitle.textContent = title;
+
+  if (mediaType === "video") {
+    galleryModalVideo.src = mediaSrc;
+    galleryModalVideo.poster = poster;
+    galleryModalVideo.play().catch((error) => {
+      if (error.name !== "AbortError") {
+        console.error("Could not play the gallery video:", error);
+      }
+    });
+  } else {
+    galleryModalImage.src = mediaSrc;
+    galleryModalImage.alt = title;
+    galleryModalVideo.removeAttribute("src");
+    galleryModalVideo.removeAttribute("poster");
+    galleryModalVideo.load();
+  }
+
+  galleryModal.classList.add("is-open");
+  galleryModal.setAttribute("aria-hidden", "false");
+}
+
+function closeGalleryImage() {
+  galleryModal.classList.remove("is-open");
+  galleryModal.setAttribute("aria-hidden", "true");
+  galleryModalVideo.pause();
+  galleryModalVideo.removeAttribute("src");
+  galleryModalVideo.removeAttribute("poster");
+  galleryModalVideo.load();
+}
+
+galleryCards.forEach((card) => {
+  card.addEventListener("click", () => {
+    const language = document.documentElement.lang === "en" ? "En" : "Hi";
+    const title = card.dataset[`title${language}`] || card.dataset.title;
+    const mediaType = card.dataset.mediaType || "image";
+    const mediaSrc = mediaType === "video" ? card.dataset.video : card.dataset.image;
+    openGalleryMedia(mediaSrc, title, mediaType, card.dataset.poster);
+  });
+  card.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      const language = document.documentElement.lang === "en" ? "En" : "Hi";
+      const title = card.dataset[`title${language}`] || card.dataset.title;
+      const mediaType = card.dataset.mediaType || "image";
+      const mediaSrc = mediaType === "video" ? card.dataset.video : card.dataset.image;
+      openGalleryMedia(mediaSrc, title, mediaType, card.dataset.poster);
+    }
+  });
+});
+
+galleryCloseButton.addEventListener("click", closeGalleryImage);
+galleryModal.addEventListener("click", (event) => {
+  if (event.target.matches("[data-close-gallery='true']") || event.target === galleryModal) {
+    closeGalleryImage();
+  }
+});
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && galleryModal.classList.contains("is-open")) {
+    closeGalleryImage();
+  }
+});
+
 const savedLanguage = localStorage.getItem("apna-cleaning-language");
 setLanguage(savedLanguage === "en" ? "en" : "hi");
-
-setInterval(() => {
-  if (
-    !reducedMotionPreference.matches &&
-    !document.hidden &&
-    !reviewCard.matches(":hover") &&
-    !reviewCard.contains(document.activeElement)
-  ) {
-    moveReview(1);
-  }
-}, 7000);
+startHighlightRotation();

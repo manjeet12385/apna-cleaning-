@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="hi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#16a34a" />
+    <meta name="description" content="Apna Cleaning Service से संपर्क करें और अपनी सफाई सेवा की बुकिंग पूछें।" />
+    <title>संपर्क करें | Apna Cleaning Service</title>
+    <link rel="icon" type="image/png" href="assets/apna-cleaning-logo.png?v=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=30" />
+  </head>
+  <body class="contact-page">
+    <header class="contact-page-header">
+      <div class="container">
+        <a class="brand" href="index.html" aria-label="Apna Cleaning Service — होम">
+          <span class="brand-mark" aria-hidden="true"><img src="assets/apna-cleaning-logo.png" alt="" /></span>
+          <span class="brand-copy"><strong>Apna Cleaning</strong><span>Service · Varanasi</span></span>
+        </a>
+        <div class="contact-page-header-actions">
+          <nav class="secondary-page-nav" aria-label="Site navigation">
+            <a href="index.html" data-contact-copy="homeLink">होम</a>
+            <a href="index.html#services" data-contact-copy="servicesLink">सेवाएं</a>
+            <a href="contact.html" aria-current="page" data-contact-copy="contactLink">संपर्क</a>
+          </nav>
+          <div class="language-switch" role="group" aria-label="भाषा चुनें">
+            <button type="button" class="language-option is-active" data-contact-language="hi" aria-pressed="true">हिन्दी</button>
+            <button type="button" class="language-option" data-contact-language="en" aria-pressed="false">English</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="contact-page-main">
+      <div class="container">
+        <header class="contact-page-title">
+          <p class="eyebrow" data-contact-copy="eyebrow">अपनी ज़रूरत बताएं</p>
+          <h1 data-contact-copy="title">हमसे संपर्क करें</h1>
+          <p data-contact-copy="description">बुकिंग, उपलब्धता और अनुमानित शुल्क की जानकारी के लिए नीचे दिए गए तरीके से संपर्क करें।</p>
+        </header>
+
+        <section class="contact-page-card" aria-label="Contact and booking form">
+          <div class="contact-dialog-content">
+            <form class="booking-form" id="booking-form">
+              <label class="booking-field">
+                <span data-contact-copy="nameLabel">आपका नाम</span>
+                <input name="name" type="text" autocomplete="name" required maxlength="80" data-contact-placeholder="namePlaceholder" placeholder="पूरा नाम" />
+              </label>
+              <label class="booking-field">
+                <span data-contact-copy="phoneLabel">फोन नंबर</span>
+                <input name="phone" type="tel" inputmode="tel" autocomplete="tel" required maxlength="20" data-contact-placeholder="phonePlaceholder" placeholder="मोबाइल नंबर" />
+              </label>
+              <label class="booking-field contact-address-field">
+                <span data-contact-copy="addressLabel">इलाका / पूरा पता</span>
+                <input name="address" type="text" autocomplete="street-address" required maxlength="180" data-contact-placeholder="addressPlaceholder" placeholder="जैसे: शिवपुर, वाराणसी" />
+              </label>
+              <fieldset class="booking-service-options">
+                <legend data-contact-copy="servicesLegend">कौन-सी सेवाएं चाहिए? (एक से ज़्यादा चुन सकते हैं)</legend>
+                <div class="booking-service-grid">
+                  <label><input type="checkbox" name="services" value="AC Cleaning" /><span data-contact-copy="serviceAc">AC क्लीनिंग</span></label>
+                  <label><input type="checkbox" name="services" value="Refrigerator Cleaning" /><span data-contact-copy="serviceFridge">फ्रिज क्लीनिंग</span></label>
+                  <label><input type="checkbox" name="services" value="Washing Machine Cleaning" /><span data-contact-copy="serviceWasher">वॉशिंग मशीन क्लीनिंग</span></label>
+                  <label><input type="checkbox" name="services" value="Oven and Chimney Cleaning" /><span data-contact-copy="serviceKitchen">ओवन और चिमनी क्लीनिंग</span></label>
+                  <label><input type="checkbox" name="services" value="Car Interior Cleaning" /><span data-contact-copy="serviceCar">कार इंटीरियर क्लीनिंग</span></label>
+                  <label><input type="checkbox" name="services" value="Water Tank Cleaning" /><span data-contact-copy="serviceTank">वॉटर टैंक क्लीनिंग</span></label>
+                  <label><input type="checkbox" name="services" value="Chairs and Upholstery Cleaning" /><span data-contact-copy="serviceUpholstery">चेयर और अपहोल्स्ट्री क्लीनिंग</span></label>
+                  <label><input type="checkbox" name="services" value="Sofa Cleaning" /><span data-contact-copy="serviceSofa">सोफा क्लीनिंग</span></label>
+                  <label><input type="checkbox" name="services" value="Other service" /><span data-contact-copy="otherService">अन्य सेवा</span></label>
+                </div>
+              </fieldset>
+              <label class="booking-field booking-details-field">
+                <span data-contact-copy="detailsLabel">ज़रूरी जानकारी (वैकल्पिक)</span>
+                <textarea name="details" rows="3" maxlength="500" data-contact-placeholder="detailsPlaceholder" placeholder="अपनी ज़रूरत या सुविधाजनक समय बताएं"></textarea>
+              </label>
+              <button class="button button-primary booking-submit" type="submit" data-contact-copy="submit">WhatsApp पर अनुरोध भेजें</button>
+              <p class="booking-form-status" id="booking-form-status" role="status" aria-live="polite" hidden></p>
+              <a class="booking-whatsapp-link" id="booking-whatsapp-link" target="_blank" rel="noopener noreferrer" hidden>
+                <span data-contact-copy="openWhatsApp">WhatsApp चैट खोलें</span> <span aria-hidden="true">↗</span>
+              </a>
+              <p class="contact-privacy-note"><span data-contact-copy="privacyNote">फ़ॉर्म की जानकारी WhatsApp में खुलेगी।</span> <a href="privacy.html" data-contact-copy="privacyLink">गोपनीयता नीति</a></p>
+            </form>
+            <aside class="contact-map-panel">
+              <h2 data-contact-copy="contactInfo">संपर्क जानकारी</h2>
+              <p data-contact-copy="area">शिवपुर, वाराणसी और आसपास</p>
+              <a class="contact-direct-link" href="tel:+919219059563">+91 92190 59563</a>
+              <a class="contact-direct-link" href="https://wa.me/919219059563?text=Namaste%2C%20mujhe%20cleaning%20service%20book%20karni%20hai." target="_blank" rel="noopener noreferrer">
+                <span data-contact-copy="directWhatsApp">WhatsApp पर मैसेज करें</span> <span aria-hidden="true">↗</span>
+              </a>
+              <iframe
+                title="शिवपुर, वाराणसी का नक्शा"
+                data-contact-title="mapTitle"
+                src="https://www.google.com/maps?q=Shivpur%2C%20Varanasi%2C%20Uttar%20Pradesh&output=embed"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+              <a href="https://www.google.com/maps/search/?api=1&query=Shivpur%2C%20Varanasi%2C%20Uttar%20Pradesh" target="_blank" rel="noopener noreferrer">
+                <span data-contact-copy="directions">Google Maps में देखें</span> <span aria-hidden="true">↗</span>
+              </a>
+            </aside>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer contact-page-footer">
+      <div class="container footer-main">
+        <div class="footer-about">
+          <a class="brand footer-brand" href="index.html">
+            <span class="brand-mark" aria-hidden="true"><img src="assets/apna-cleaning-logo.png" alt="" /></span>
+            <span class="brand-copy"><strong>Apna Cleaning</strong><span>Service · Varanasi</span></span>
+          </a>
+          <p data-contact-copy="footerDescription">आपके घर और रोज़मर्रा की ज़रूरतों के लिए, दिल से की गई service.</p>
+          <span class="footer-location"><span aria-hidden="true">⌖</span><span data-contact-copy="area">शिवपुर, वाराणसी और आसपास</span></span>
+        </div>
+        <nav class="footer-column" aria-label="Footer navigation">
+          <h2 data-contact-copy="quickLinks">Quick Links</h2>
+          <a href="index.html" data-contact-copy="homeLink">होम</a>
+          <a href="index.html#services" data-contact-copy="servicesLink">सेवाएं</a>
+          <a href="contact.html" data-contact-copy="contactLink">संपर्क</a>
+          <a href="privacy.html" data-contact-copy="privacyLink">गोपनीयता नीति</a>
+          <a href="terms.html" data-contact-copy="termsLink">नियम और शर्तें</a>
+        </nav>
+        <div class="footer-column footer-contact">
+          <h2 data-contact-copy="contactInfo">संपर्क जानकारी</h2>
+          <span data-contact-copy="contactPrompt">बुकिंग और जानकारी के लिए कॉल करें</span>
+          <a class="footer-phone" href="tel:+919219059563">+91 92190 59563</a>
+          <a class="footer-whatsapp" href="https://wa.me/919219059563?text=Namaste%2C%20mujhe%20cleaning%20service%20book%20karni%20hai." target="_blank" rel="noopener noreferrer">
+            <span data-contact-copy="directWhatsApp">WhatsApp पर मैसेज करें</span> <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <span>© <span id="contact-year"></span> <span data-contact-copy="copyright">Apna Cleaning Service. All rights reserved.</span></span>
+          <a href="index.html"><span data-contact-copy="madeWithCare">Made with care in Varanasi</span> <span aria-hidden="true">↑</span></a>
+        </div>
+      </div>
+    </footer>
+    <script src="contact-page.js?v=2"></script>
+  </body>
+</html>

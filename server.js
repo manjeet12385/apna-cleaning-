@@ -3,7 +3,8 @@ const fs = require("node:fs");
 const path = require("node:path");
 
 const root = __dirname;
-const port = Number(process.env.PORT) || 4173;
+const host = process.env.HOST || "localhost";
+const port = Number(process.env.PORT) || 4174;
 const contentTypes = {
   ".css": "text/css; charset=utf-8",
   ".html": "text/html; charset=utf-8",
@@ -52,6 +53,13 @@ const server = http.createServer((request, response) => {
 });
 
 function listenOnPort(availablePort) {
+  const onListen = () => {
+    const address = server.address();
+    if (address && typeof address !== "string" && address.port === availablePort) {
+      console.log(`Apna Cleaning Service preview: http://localhost:${availablePort}`);
+    }
+  };
+
   server.once("error", (error) => {
     if (error.code === "EADDRINUSE" && availablePort < port + 20) {
       console.warn(`Port ${availablePort} is already in use; trying ${availablePort + 1}.`);
@@ -59,16 +67,17 @@ function listenOnPort(availablePort) {
       return;
     }
 
+    if (error.code === "EADDRNOTAVAIL" && host === "localhost") {
+      console.warn(`localhost binding is unavailable; falling back to 127.0.0.1 on port ${availablePort}.`);
+      server.listen(availablePort, "127.0.0.1", onListen);
+      return;
+    }
+
     console.error(`Could not start preview server on port ${availablePort}:`, error.message);
     process.exitCode = 1;
   });
 
-  server.listen(availablePort, "127.0.0.1", () => {
-    const address = server.address();
-    if (address && typeof address !== "string" && address.port === availablePort) {
-      console.log(`Apna Cleaning Service preview: http://localhost:${availablePort}`);
-    }
-  });
+  server.listen(availablePort, host, onListen);
 }
 
 listenOnPort(port);

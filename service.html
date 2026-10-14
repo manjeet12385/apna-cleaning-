@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#f7f8f4" />
+    <meta name="theme-color" content="#16a34a" />
     <meta
       name="description"
       content="Explore Apna Cleaning Service services in Shivpur, Varanasi."
@@ -18,23 +18,34 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=19" />
+    <link rel="stylesheet" href="styles.css?v=31" />
   </head>
   <body class="service-detail-page">
     <header class="site-header">
+      <div class="service-strip" aria-label="Cleaning services: AC, refrigerator, washing machine, oven and chimney, deep house, apartment, floor, glass and window, move-in and move-out, car interior, water tank, upholstery, and sofa cleaning">
+        <span class="service-strip-label" aria-hidden="true">Cleaning</span>
+        <div class="service-strip-window" aria-hidden="true">
+          <div class="service-strip-track">
+            <span class="service-strip-group">AC Cleaning <span>·</span> Refrigerator Cleaning <span>·</span> Washing Machine Cleaning <span>·</span> Oven &amp; Chimney Cleaning <span>·</span> Deep House Cleaning <span>·</span> Apartment Cleaning <span>·</span> Floor Cleaning <span>·</span> Glass &amp; Window Cleaning <span>·</span> Move-In / Move-Out Cleaning <span>·</span> Car Interior Cleaning <span>·</span> Water Tank Cleaning <span>·</span> Upholstery Cleaning <span>·</span> Sofa Cleaning <span>·</span></span>
+            <span class="service-strip-group" aria-hidden="true">AC Cleaning <span>·</span> Refrigerator Cleaning <span>·</span> Washing Machine Cleaning <span>·</span> Oven &amp; Chimney Cleaning <span>·</span> Deep House Cleaning <span>·</span> Apartment Cleaning <span>·</span> Floor Cleaning <span>·</span> Glass &amp; Window Cleaning <span>·</span> Move-In / Move-Out Cleaning <span>·</span> Car Interior Cleaning <span>·</span> Water Tank Cleaning <span>·</span> Upholstery Cleaning <span>·</span> Sofa Cleaning <span>·</span></span>
+          </div>
+        </div>
+      </div>
       <nav class="service-detail-nav container" aria-label="मुख्य नेविगेशन">
         <a class="brand" href="index.html#home" aria-label="Apna Cleaning Service — होम">
           <span class="brand-mark" aria-hidden="true"><img src="assets/apna-cleaning-logo.png" alt="" /></span>
           <span class="brand-copy"><strong>Apna Cleaning</strong><span>Service · Varanasi</span></span>
         </a>
+        <nav class="service-page-nav" aria-label="Site navigation">
+          <a href="index.html#home" data-detail-copy="navHome">होम</a>
+          <a href="index.html#services" data-detail-copy="back">सभी सेवाएं</a>
+          <a href="contact.html" data-detail-copy="navContact">संपर्क करें</a>
+        </nav>
         <div class="service-detail-actions">
           <div class="language-switch" role="group" aria-label="भाषा चुनें">
             <button type="button" class="language-option" data-detail-language="hi" aria-pressed="true">हिन्दी</button>
             <button type="button" class="language-option" data-detail-language="en" aria-pressed="false">English</button>
           </div>
-          <a class="service-back-link" href="index.html#services">
-            <span aria-hidden="true">←</span> <span data-detail-copy="back">सभी सेवाएं</span>
-          </a>
         </div>
       </nav>
     </header>
@@ -148,16 +159,41 @@
       </section>
     </main>
 
-    <footer class="service-detail-footer">
-      <div class="container">
-        <a class="brand" href="index.html#home">
-          <span class="brand-mark" aria-hidden="true"><img src="assets/apna-cleaning-logo.png" alt="" /></span>
-          <span class="brand-copy"><strong>Apna Cleaning</strong><span>Service · Varanasi</span></span>
-        </a>
-        <span>© <span id="service-year"></span> Apna Cleaning Service · Shivpur, Varanasi</span>
+    <footer class="site-footer service-page-footer">
+      <div class="container footer-main">
+        <div class="footer-about">
+          <a class="brand footer-brand" href="index.html#home" aria-label="Apna Cleaning Service — होम">
+            <span class="brand-mark" aria-hidden="true"><img src="assets/apna-cleaning-logo.png" alt="" /></span>
+            <span class="brand-copy"><strong>Apna Cleaning</strong><span>Service · Varanasi</span></span>
+          </a>
+          <p data-detail-copy="footerDescription">आपके घर और रोज़मर्रा की ज़रूरतों के लिए, दिल से की गई service.</p>
+          <span class="footer-location"><span aria-hidden="true">⌖</span><span data-detail-copy="footerLocation">शिवपुर, वाराणसी और आसपास</span></span>
+        </div>
+        <nav class="footer-column" aria-label="Footer navigation">
+          <h2 data-detail-copy="quickLinks">Quick Links</h2>
+          <a href="index.html#home" data-detail-copy="navHome">होम</a>
+          <a href="index.html#services" data-detail-copy="back">सभी सेवाएं</a>
+          <a href="contact.html" data-detail-copy="navContact">संपर्क करें</a>
+          <a href="privacy.html" data-detail-copy="footerPrivacy">गोपनीयता नीति</a>
+          <a href="terms.html" data-detail-copy="footerTerms">नियम और शर्तें</a>
+        </nav>
+        <div class="footer-column footer-contact">
+          <h2 data-detail-copy="contactHeading">हमसे संपर्क करें</h2>
+          <span data-detail-copy="contactPrompt">बुकिंग और जानकारी के लिए कॉल करें</span>
+          <a class="footer-phone" href="tel:+919219059563">+91 92190 59563</a>
+          <a class="footer-whatsapp" href="https://wa.me/919219059563?text=Namaste%2C%20mujhe%20cleaning%20service%20book%20karni%20hai." target="_blank" rel="noopener noreferrer">
+            <span data-detail-copy="whatsappMessage">WhatsApp पर मैसेज करें</span> <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <span>© <span id="service-year"></span> <span data-detail-copy="copyright">Apna Cleaning Service. All rights reserved.</span></span>
+          <a href="index.html#home"><span data-detail-copy="madeWithCare">Made with care in Varanasi</span> <span aria-hidden="true">↑</span></a>
+        </div>
       </div>
     </footer>
 
-    <script src="service-page.js?v=1"></script>
+    <script src="service-page.js?v=3"></script>
   </body>
 </html>

@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Apna Cleaning Service — AC, fridge, washing machine, chimney, water tank, car interior और upholstery cleaning की भरोसेमंद सेवा। शिवपुर, वाराणसी में कॉल या WhatsApp करें।"
+      content="Apna Cleaning Service — AC, fridge, washing machine, oven, chimney, car interior, water tank, upholstery और sofa cleaning। शिवपुर, वाराणसी में कॉल या WhatsApp करें।"
       data-i18n-content="metaDescription"
     />
-    <meta name="theme-color" content="#f7f8f4" />
+    <meta name="theme-color" content="#16a34a" />
     <title data-i18n="pageTitle">Apna Cleaning Service | सफाई और होम सर्विस, वाराणसी</title>
     <link rel="icon" type="image/png" href="assets/apna-cleaning-logo.png?v=1" />
     <link rel="apple-touch-icon" href="assets/apna-cleaning-logo.png?v=1" />
@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=19" />
+    <link rel="stylesheet" href="styles.css?v=41" />
   </head>
   <body>
     <header class="site-header">
@@ -44,6 +44,7 @@
 
         <div class="nav-links" id="nav-links">
           <a href="#home" data-i18n="navHome">होम</a>
+          <a href="#gallery" data-i18n="navGallery">गैलरी</a>
           <div class="nav-service-menu">
             <button class="nav-service-toggle" type="button" aria-expanded="false" aria-controls="services-menu">
               <span data-i18n="navServices">हमारी सेवाएं</span>
@@ -51,22 +52,27 @@
             </button>
             <div class="services-dropdown" id="services-menu" hidden>
               <p class="services-dropdown-heading" data-i18n="servicesDropdownHeading">अपनी service चुनें</p>
-              <a class="services-dropdown-link" href="service.html?service=ac"><span data-i18n="serviceAcTitle">AC सर्विस</span><small data-i18n="serviceAcDescription">AC की देखभाल और सर्विस, ताकि घर रहे ठंडा और आरामदायक।</small></a>
-              <a class="services-dropdown-link" href="service.html?service=fridge"><span data-i18n="serviceFridgeTitle">फ्रिज सर्विस</span><small data-i18n="serviceFridgeDescription">फ्रिज की सर्विस के लिए मदद — समय और जानकारी के लिए कॉल करें।</small></a>
-              <a class="services-dropdown-link" href="service.html?service=washer"><span data-i18n="serviceWasherTitle">वॉशिंग मशीन</span><small data-i18n="serviceWasherDescription">वॉशिंग मशीन की सर्विस के लिए सुविधाजनक home visit बुक करें।</small></a>
-              <a class="services-dropdown-link" href="service.html?service=kitchen"><span data-i18n="serviceKitchenTitle">ओवन और चिमनी</span><small data-i18n="serviceKitchenDescription">किचन के oven और chimney की सर्विस व सफाई की सुविधा।</small></a>
-              <a class="services-dropdown-link" href="service.html?service=car"><span data-i18n="serviceCarTitle">कार इंटीरियर</span><small data-i18n="serviceCarDescription">गाड़ी के अंदरूनी हिस्सों की सफाई से सफर बनाएं और भी fresh।</small></a>
-              <a class="services-dropdown-link" href="service.html?service=tank"><span data-i18n="serviceTankTitle">वॉटर टैंक सफाई</span><small data-i18n="serviceTankDescription">पानी की टंकी की सफाई के लिए अपनी booking पहले से तय करें।</small></a>
-              <a class="services-dropdown-link" href="service.html?service=upholstery"><span data-i18n="serviceUpholsteryTitle">चेयर और upholstery</span><small data-i18n="serviceUpholsteryDescription">चेयर और fabric surfaces की सफाई से घर को दें नया एहसास।</small></a>
+              <a class="services-dropdown-link" href="service.html?service=ac"><span data-i18n="serviceAcTitle">AC क्लीनिंग</span><small data-i18n="serviceAcDescription">AC की सफाई के विकल्प जानें और अपने घर को ठंडा व आरामदायक रखें।</small></a>
+              <a class="services-dropdown-link" href="service.html?service=fridge"><span data-i18n="serviceFridgeTitle">फ्रिज क्लीनिंग</span><small data-i18n="serviceFridgeDescription">फ्रिज की अंदरूनी सफाई और देखभाल के बारे में पूछें।</small></a>
+              <a class="services-dropdown-link" href="service.html?service=washer"><span data-i18n="serviceWasherTitle">वॉशिंग मशीन क्लीनिंग</span><small data-i18n="serviceWasherDescription">वॉशिंग मशीन की सफाई और उपलब्धता की जानकारी लें।</small></a>
+              <a class="services-dropdown-link" href="service.html?service=kitchen"><span data-i18n="serviceKitchenTitle">ओवन और चिमनी क्लीनिंग</span><small data-i18n="serviceKitchenDescription">किचन ओवन और चिमनी की सफाई के विकल्प जानें।</small></a>
+              <a class="services-dropdown-link" href="service.html?service=deep-cleaning"><span data-i18n="serviceDeepCleaningTitle">हाउस डिप क्लीनिंग</span><small data-i18n="serviceDeepCleaningDescription">सभी कमरे, फर्श, किचन और बाथरूम की गहरी सफाई के विकल्प जानें।</small></a>
+              <a class="services-dropdown-link" href="service.html?service=apartment"><span data-i18n="serviceApartmentTitle">अपार्टमेंट क्लीनिंग</span><small data-i18n="serviceApartmentDescription">अधिकारी, किराये और छोटे फ्लैट की सफाई के लिए घर-परिवार के अनुसार सेवा पूछें।</small></a>
+              <a class="services-dropdown-link" href="service.html?service=floor"><span data-i18n="serviceFloorTitle">फ्लोर क्लीनिंग</span><small data-i18n="serviceFloorDescription">टाइल, मार्बल, ग्रेनाइट या hardwood floor की सफाई का विकल्प जानें।</small></a>
+              <a class="services-dropdown-link" href="service.html?service=glass"><span data-i18n="serviceGlassTitle">ग्लास एंड विंडो क्लीनिंग</span><small data-i18n="serviceGlassDescription">खिड़कियों, दरवाज़ों और ग्लास surface पर धूल, दाग और streak removal के विकल्प पूछें।</small></a>
+              <a class="services-dropdown-link" href="service.html?service=move"><span data-i18n="serviceMoveTitle">मूव इन / मूव आउट क्लीनिंग</span><small data-i18n="serviceMoveDescription">घर खाली करने या नए घर में प्रवेश के समय पूरी सफाई और reset service के लिए पूछें।</small></a>
+              <a class="services-dropdown-link" href="service.html?service=car"><span data-i18n="serviceCarTitle">कार इंटीरियर क्लीनिंग</span><small data-i18n="serviceCarDescription">सीटों और कार के अंदरूनी हिस्सों की सफाई के विकल्प पूछें।</small></a>
+              <a class="services-dropdown-link" href="service.html?service=tank"><span data-i18n="serviceTankTitle">वॉटर टैंक क्लीनिंग</span><small data-i18n="serviceTankDescription">पानी की टंकी की सफाई के लिए अपनी booking पहले से तय करें।</small></a>
+              <a class="services-dropdown-link" href="service.html?service=upholstery"><span data-i18n="serviceUpholsteryTitle">चेयर और अपहोल्स्ट्री क्लीनिंग</span><small data-i18n="serviceUpholsteryDescription">चेयर और fabric surfaces की सफाई के विकल्प जानें।</small></a>
+              <a class="services-dropdown-link" href="service.html?service=sofa"><span data-i18n="serviceSofaTitle">सोफा क्लीनिंग</span><small data-i18n="serviceSofaDescription">अपने सोफे के fabric और दागों के अनुसार सफाई के विकल्प पूछें।</small></a>
             </div>
           </div>
-          <a href="#about" data-i18n="navAbout">हमारे बारे में</a>
-          <a href="#contact" data-open-contact data-i18n="navContact">संपर्क करें</a>
-          <a class="nav-call" href="tel:+919219059563">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.2 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1v3.5a1 1 0 0 1-1 1A17.5 17.5 0 0 1 2.7 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .6 3.6 1 1 0 0 1-.2 1l-2 2.2Z" /></svg>
-            <span>+91 92190 59563</span>
-          </a>
+          <a href="about.html" data-i18n="navAbout">हमारे बारे में</a>
         </div>
+        <a class="nav-call" href="tel:+919219059563">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.2 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1v3.5a1 1 0 0 1-1 1A17.5 17.5 0 0 1 2.7 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .6 3.6 1 1 0 0 1-.2 1l-2 2.2Z" /></svg>
+          <span>+91 92190 59563</span>
+        </a>
       </nav>
     </header>
 
@@ -76,8 +82,22 @@
           <div class="hero-copy">
             <h1><span data-i18n="heroTitleTop">सफाई हो या सर्विस,</span><br /><span data-i18n="heroTitleBottom">अपना भरोसा चुनें।</span></h1>
             <p class="hero-description" data-i18n="heroDescription">
-              घर, गाड़ी और appliances के लिए आसान और भरोसेमंद service — आपके दरवाज़े पर।
+              घर, गाड़ी और घरेलू उपकरणों की सफाई के लिए भरोसेमंद सेवा — शिवपुर, वाराणसी में।
             </p>
+            <div class="hero-readability-panel" aria-label="सेवा की ज़रूरी जानकारी" data-i18n-aria-label="heroHighlightsLabel">
+              <div class="info-pill">
+                <span class="info-badge info-badge-primary" data-i18n="heroBadgeHomeLabel">सेवा</span>
+                <strong data-i18n="heroBadgeHome">घर पर, उपलब्धता अनुसार</strong>
+              </div>
+              <div class="info-pill">
+                <span class="info-badge info-badge-green" data-i18n="heroBadgeAreaLabel">क्षेत्र</span>
+                <strong data-i18n="heroBadgeArea">शिवपुर, वाराणसी</strong>
+              </div>
+              <div class="info-pill">
+                <span class="info-badge info-badge-blue" data-i18n="heroBadgeBookingLabel">बुकिंग</span>
+                <strong data-i18n="heroBadgeBooking">WhatsApp पर पूछें</strong>
+              </div>
+            </div>
             <div class="hero-actions">
               <a class="button button-primary" href="https://wa.me/919219059563?text=Namaste%2C%20mujhe%20cleaning%20service%20book%20karni%20hai." target="_blank" rel="noopener noreferrer">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 2 17.7L.5 23l5.4-1.4a11.8 11.8 0 0 0 5.6 1.4h.1A11.8 11.8 0 0 0 23.4 11a11.7 11.7 0 0 0-2.9-7.5ZM11.6 21a9.8 9.8 0 0 1-5-.0l-.4-.2-3.2.8.9-3.1-.2-.4A9.8 9.8 0 1 1 11.6 21Zm5.4-7.3c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.5-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.4.1-.6l.5-.5.3-.5c.1-.2 0-.4 0-.5-.1-.2-.7-1.6-1-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.1 3c.2.2 2 3.1 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.3-.6-.5Z" /></svg>
@@ -87,11 +107,6 @@
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.2 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1v3.5a1 1 0 0 1-1 1A17.5 17.5 0 0 1 2.7 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .6 3.6 1 1 0 0 1-.2 1l-2 2.2Z" /></svg>
                 <span data-i18n="callNow">अभी कॉल करें</span>
               </a>
-            </div>
-            <div class="hero-points">
-              <span><span class="check">✓</span> <span data-i18n="heroPointHome">घर पर service</span></span>
-              <span><span class="check">✓</span> <span data-i18n="heroPointBooking">आसान booking</span></span>
-              <span><span class="check">✓</span> <span data-i18n="heroPointLocal">लोकल टीम</span></span>
             </div>
           </div>
           <div class="hero-visual">
@@ -116,20 +131,9 @@
             </button>
             <div class="hero-image-note">
               <span class="note-icon" aria-hidden="true">✦</span>
-              <span><strong data-i18n="videoNoteTitle">हर कोने की सफाई</strong><small data-i18n="videoNoteSubtitle">Care that feels like home</small></span>
+              <span><strong data-i18n="videoNoteTitle">साफ घर, सुकून भरा एहसास</strong><small data-i18n="videoNoteSubtitle">शिवपुर, वाराणसी और आसपास</small></span>
             </div>
-            <div class="floating-card">
-              <span class="floating-icon" aria-hidden="true">⌂</span>
-              <span><strong data-i18n="floatingTitle">आपके घर तक</strong><small>Shivpur, Varanasi</small></span>
-            </div>
-            <span class="visual-orbit orbit-one"></span>
-            <span class="visual-orbit orbit-two"></span>
           </div>
-        </div>
-        <div class="hero-bottom container">
-          <span data-i18n="heroBottomLeft">आपका घर, हमारी ज़िम्मेदारी</span>
-          <span class="bottom-line"></span>
-          <span>Apna Cleaning Service</span>
         </div>
       </section>
 
@@ -210,73 +214,170 @@
             <article class="service-card" id="service-ac" data-service-page="ac" role="link" tabindex="0">
               <div class="service-preview">
                 <img
-                  src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=75"
+                  src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80"
                   alt="Air conditioner service preview"
                   data-i18n-alt="videoAc"
                 />
               </div>
-              <h3 data-i18n="serviceAcTitle">AC सर्विस</h3>
+              <h3 data-i18n="serviceAcTitle">AC क्लीनिंग</h3>
               <p data-i18n="serviceAcDescription">AC की देखभाल और सर्विस, ताकि घर रहे ठंडा और आरामदायक।</p>
               <span class="service-card-more"><span data-i18n="bookingAsk">विस्तार देखें</span> <span>↗</span></span>
             </article>
             <article class="service-card" id="service-fridge" data-service-page="fridge" role="link" tabindex="0">
               <div class="service-preview">
-                <video autoplay muted loop playsinline preload="metadata" poster="https://images.pexels.com/videos/9462942/pexels-photo-9462942.jpeg?auto=compress&w=600" aria-label="Refrigerator cleaning preview" data-i18n-aria-label="videoFridge">
-                  <source src="https://videos.pexels.com/video-files/9462942/9462942-sd_360_640_24fps.mp4" type="video/mp4" />
-                </video>
+                <img
+                  src="assets/service-images/fridge-cleaning.jpg"
+                  alt="Fridge cleaning preview"
+                  data-i18n-alt="videoFridge"
+                  loading="lazy"
+                />
               </div>
-              <h3 data-i18n="serviceFridgeTitle">फ्रिज सर्विस</h3>
+              <h3 data-i18n="serviceFridgeTitle">फ्रिज क्लीनिंग</h3>
               <p data-i18n="serviceFridgeDescription">फ्रिज की सर्विस के लिए मदद — समय और जानकारी के लिए कॉल करें।</p>
               <span class="service-card-more"><span data-i18n="bookingAsk">विस्तार देखें</span> <span>↗</span></span>
             </article>
             <article class="service-card" id="service-washer" data-service-page="washer" role="link" tabindex="0">
               <div class="service-preview">
-                <video autoplay muted loop playsinline preload="metadata" poster="https://images.pexels.com/videos/4440711/pexels-photo-4440711.jpeg?auto=compress&w=600" aria-label="Washing machine in use preview" data-i18n-aria-label="videoWasher">
-                  <source src="https://videos.pexels.com/video-files/4440711/4440711-sd_640_360_25fps.mp4" type="video/mp4" />
-                </video>
+                <img
+                  src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=1200&q=85"
+                  alt="Washing machine cleaning preview"
+                  data-i18n-alt="videoWasher"
+                  loading="lazy"
+                />
               </div>
-              <h3 data-i18n="serviceWasherTitle">वॉशिंग मशीन</h3>
+              <h3 data-i18n="serviceWasherTitle">वॉशिंग मशीन क्लीनिंग</h3>
               <p data-i18n="serviceWasherDescription">वॉशिंग मशीन की सर्विस के लिए सुविधाजनक home visit बुक करें।</p>
               <span class="service-card-more"><span data-i18n="bookingAsk">विस्तार देखें</span> <span>↗</span></span>
             </article>
             <article class="service-card" id="service-kitchen" data-service-page="kitchen" role="link" tabindex="0">
               <div class="service-preview">
-                <video autoplay muted loop playsinline preload="metadata" poster="https://images.pexels.com/videos/9473225/pexels-photo-9473225.jpeg?auto=compress&w=600" aria-label="Oven cleaning preview" data-i18n-aria-label="videoOven">
-                  <source src="https://videos.pexels.com/video-files/9473225/9473225-sd_360_640_24fps.mp4" type="video/mp4" />
-                </video>
+                <img
+                  src="assets/service-images/chimney-cleaning.jpg"
+                  alt="Oven and chimney cleaning preview"
+                  data-i18n-alt="videoOven"
+                  loading="lazy"
+                />
               </div>
-              <h3 data-i18n="serviceKitchenTitle">ओवन और चिमनी</h3>
+              <h3 data-i18n="serviceKitchenTitle">ओवन और चिमनी क्लीनिंग</h3>
               <p data-i18n="serviceKitchenDescription">किचन के oven और chimney की सर्विस व सफाई की सुविधा।</p>
+              <span class="service-card-more"><span data-i18n="bookingAsk">विस्तार देखें</span> <span>↗</span></span>
+            </article>
+            <article class="service-card" id="service-deep-cleaning" data-service-page="deep-cleaning" role="link" tabindex="0">
+              <div class="service-preview">
+                <img
+                  src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1200&q=85"
+                  alt="Home deep cleaning preview"
+                  data-i18n-alt="videoDeepCleaning"
+                  loading="lazy"
+                />
+              </div>
+              <h3 data-i18n="serviceDeepCleaningTitle">हाउस डिप क्लीनिंग</h3>
+              <p data-i18n="serviceDeepCleaningDescription">कमरों, फर्श, किचन और बाथरूम की गहरी सफाई के लिए पूरी होम care service।</p>
+              <span class="service-card-more"><span data-i18n="bookingAsk">विस्तार देखें</span> <span>↗</span></span>
+            </article>
+            <article class="service-card" id="service-apartment" data-service-page="apartment" role="link" tabindex="0">
+              <div class="service-preview">
+                <img
+                  src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=85"
+                  alt="Apartment cleaning preview"
+                  data-i18n-alt="videoApartment"
+                  loading="lazy"
+                />
+              </div>
+              <h3 data-i18n="serviceApartmentTitle">अपार्टमेंट क्लीनिंग</h3>
+              <p data-i18n="serviceApartmentDescription">अपार्टमेंट के हर कमरे, kitchen और washroom की सफाई के लिए पूरी service।</p>
+              <span class="service-card-more"><span data-i18n="bookingAsk">विस्तार देखें</span> <span>↗</span></span>
+            </article>
+            <article class="service-card" id="service-floor" data-service-page="floor" role="link" tabindex="0">
+              <div class="service-preview">
+                <img
+                  src="assets/service-images/floor-cleaning.jpg"
+                  alt="Floor cleaning preview"
+                  data-i18n-alt="videoFloor"
+                  loading="lazy"
+                />
+              </div>
+              <h3 data-i18n="serviceFloorTitle">फ्लोर क्लीनिंग</h3>
+              <p data-i18n="serviceFloorDescription">टाइल, marble और hardwood floor की सफाई और shine recovery के विकल्प जानें।</p>
+              <span class="service-card-more"><span data-i18n="bookingAsk">विस्तार देखें</span> <span>↗</span></span>
+            </article>
+            <article class="service-card" id="service-glass" data-service-page="glass" role="link" tabindex="0">
+              <div class="service-preview">
+                <img
+                  src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=85"
+                  alt="Glass and window cleaning preview"
+                  data-i18n-alt="videoGlass"
+                  loading="lazy"
+                />
+              </div>
+              <h3 data-i18n="serviceGlassTitle">ग्लास एंड विंडो क्लीनिंग</h3>
+              <p data-i18n="serviceGlassDescription">खिड़कियों, दरवाज़ों और ग्लास surface की सफाई से घर चमकता है।</p>
+              <span class="service-card-more"><span data-i18n="bookingAsk">विस्तार देखें</span> <span>↗</span></span>
+            </article>
+            <article class="service-card" id="service-move" data-service-page="move" role="link" tabindex="0">
+              <div class="service-preview">
+                <img
+                  src="assets/service-images/move-in-out-cleaning.jpg"
+                  alt="Move in move out cleaning preview"
+                  data-i18n-alt="videoMove"
+                  loading="lazy"
+                />
+              </div>
+              <h3 data-i18n="serviceMoveTitle">मूव इन / मूव आउट क्लीनिंग</h3>
+              <p data-i18n="serviceMoveDescription">घर खाली करने या नए घर में प्रवेश के समय full reset और final touch cleaning।</p>
               <span class="service-card-more"><span data-i18n="bookingAsk">विस्तार देखें</span> <span>↗</span></span>
             </article>
             <article class="service-card" id="service-car" data-service-page="car" role="link" tabindex="0">
               <div class="service-preview">
-                <video autoplay muted loop playsinline preload="metadata" poster="https://images.pexels.com/videos/4822914/pexels-photo-4822914.jpeg?auto=compress&w=900" aria-label="Person vacuuming car seats" data-i18n-aria-label="videoCar">
-                  <source src="https://videos.pexels.com/video-files/4822914/4822914-sd_640_360_30fps.mp4" type="video/mp4" />
-                </video>
+                <img
+                  src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=85"
+                  alt="Car interior cleaning preview"
+                  data-i18n-alt="videoCar"
+                  loading="lazy"
+                />
               </div>
-              <h3 data-i18n="serviceCarTitle">कार इंटीरियर</h3>
+              <h3 data-i18n="serviceCarTitle">कार इंटीरियर क्लीनिंग</h3>
               <p data-i18n="serviceCarDescription">गाड़ी के अंदरूनी हिस्सों की सफाई से सफर बनाएं और भी fresh।</p>
               <span class="service-card-more"><span data-i18n="bookingAsk">विस्तार देखें</span> <span>↗</span></span>
             </article>
             <article class="service-card" id="service-tank" data-service-page="tank" role="link" tabindex="0">
               <div class="service-preview">
-                <video autoplay muted loop playsinline preload="metadata" poster="https://images.pexels.com/videos/4451962/pexels-photo-4451962.jpeg?auto=compress&w=600" aria-label="Water cleaning preview" data-i18n-aria-label="videoTank">
-                  <source src="https://videos.pexels.com/video-files/4451962/4451962-sd_640_360_30fps.mp4" type="video/mp4" />
-                </video>
+                <img
+                  src="assets/service-images/water-tank-cleaning.jpg"
+                  alt="Water tank cleaning preview"
+                  data-i18n-alt="videoTank"
+                  loading="lazy"
+                  data-fallback="assets/service-images/water-tank-cleaning.jpg"
+                />
               </div>
-              <h3 data-i18n="serviceTankTitle">वॉटर टैंक सफाई</h3>
+              <h3 data-i18n="serviceTankTitle">वॉटर टैंक क्लीनिंग</h3>
               <p data-i18n="serviceTankDescription">पानी की टंकी की सफाई के लिए अपनी booking पहले से तय करें।</p>
               <span class="service-card-more"><span data-i18n="bookingAsk">विस्तार देखें</span> <span>↗</span></span>
             </article>
             <article class="service-card" id="service-upholstery" data-service-page="upholstery" role="link" tabindex="0">
               <div class="service-preview">
-                <video autoplay muted loop playsinline preload="metadata" poster="https://images.pexels.com/videos/9473231/pexels-photo-9473231.jpeg?auto=compress&w=600" aria-label="Upholstery cleaning preview" data-i18n-aria-label="videoUpholstery">
-                  <source src="https://videos.pexels.com/video-files/9473231/9473231-sd_360_640_24fps.mp4" type="video/mp4" />
-                </video>
+                <img
+                  src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1200&q=85"
+                  alt="Chair and upholstery cleaning preview"
+                  data-i18n-alt="videoUpholstery"
+                  loading="lazy"
+                />
               </div>
-              <h3 data-i18n="serviceUpholsteryTitle">चेयर और upholstery</h3>
-              <p data-i18n="serviceUpholsteryDescription">चेयर और fabric surfaces की सफाई से घर को दें नया एहसास।</p>
+              <h3 data-i18n="serviceUpholsteryTitle">चेयर और अपहोल्स्ट्री क्लीनिंग</h3>
+              <p data-i18n="serviceUpholsteryDescription">चेयर और fabric surfaces की सफाई के विकल्प जानें।</p>
+              <span class="service-card-more"><span data-i18n="bookingAsk">विस्तार देखें</span> <span>↗</span></span>
+            </article>
+            <article class="service-card" id="service-sofa" data-service-page="sofa" role="link" tabindex="0">
+              <div class="service-preview">
+                <img
+                  src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1200&q=85"
+                  alt="Sofa cleaning preview"
+                  data-i18n-alt="videoSofa"
+                  loading="lazy"
+                />
+              </div>
+              <h3 data-i18n="serviceSofaTitle">सोफा क्लीनिंग</h3>
+              <p data-i18n="serviceSofaDescription">सोफे के fabric और स्थिति के अनुसार सफाई के विकल्प जानें।</p>
               <span class="service-card-more"><span data-i18n="bookingAsk">विस्तार देखें</span> <span>↗</span></span>
             </article>
             <article class="service-card service-card-cta">
@@ -289,28 +390,79 @@
         </div>
       </section>
 
-      <section class="reviews section" id="reviews" aria-labelledby="reviews-title">
+      <section class="gallery section" id="gallery" aria-labelledby="gallery-title">
+        <div class="container">
+          <h2 id="gallery-title" class="gallery-title"><span data-i18n="galleryTitleLead">Our</span> <span data-i18n="galleryTitleAccent">gallery</span></h2>
+          <div class="gallery-grid" aria-label="सफाई सेवाओं की गैलरी" data-i18n-aria-label="galleryLabel">
+            <figure class="gallery-item gallery-card" tabindex="0" data-image="assets/gallery/washing-machine.jpg" data-title-hi="वॉशिंग मशीन की सफाई" data-title-en="Washing machine cleaning">
+              <div class="gallery-thumb">
+                <img src="assets/gallery/washing-machine.jpg" alt="वॉशिंग मशीन की सफाई" data-i18n-alt="galleryWasherPhoto" />
+              </div>
+              <figcaption><span class="gallery-icon" aria-hidden="true">🧼</span> <span data-i18n="galleryWasherPhoto">वॉशिंग मशीन की सफाई</span></figcaption>
+            </figure>
+            <figure class="gallery-item gallery-card" tabindex="0" data-image="assets/gallery/ac-cleaning.jpg" data-title-hi="AC की सफाई" data-title-en="AC cleaning">
+              <div class="gallery-thumb">
+                <img src="assets/gallery/ac-cleaning.jpg" alt="AC की सफाई" data-i18n-alt="galleryAcPhoto" />
+              </div>
+              <figcaption><span class="gallery-icon" aria-hidden="true">❄️</span> <span data-i18n="galleryAcPhoto">AC की सफाई</span></figcaption>
+            </figure>
+            <figure class="gallery-item gallery-card" tabindex="0" data-image="assets/gallery/fridge-cleaning.jpg" data-title-hi="फ्रिज की सफाई" data-title-en="Refrigerator cleaning">
+              <div class="gallery-thumb">
+                <img src="assets/gallery/fridge-cleaning.jpg" alt="फ्रिज की सफाई" data-i18n-alt="galleryFridgePhoto" />
+              </div>
+              <figcaption><span class="gallery-icon" aria-hidden="true">🧊</span> <span data-i18n="galleryFridgePhoto">फ्रिज की सफाई</span></figcaption>
+            </figure>
+            <figure class="gallery-item gallery-card" tabindex="0" data-image="assets/gallery/chimney-cleaning.jpg" data-title-hi="चिमनी की सफाई" data-title-en="Chimney cleaning">
+              <div class="gallery-thumb">
+                <img src="assets/gallery/chimney-cleaning.jpg" alt="चिमनी की सफाई" data-i18n-alt="galleryChimneyPhoto" />
+              </div>
+              <figcaption><span class="gallery-icon" aria-hidden="true">🔥</span> <span data-i18n="galleryChimneyPhoto">चिमनी की सफाई</span></figcaption>
+            </figure>
+            <figure class="gallery-item gallery-card" tabindex="0" data-media-type="video" data-video="assets/gallery/sofa-cleaning.mp4" data-poster="assets/gallery/sofa-cleaning-1.png" data-title-hi="सोफा और कुर्सी क्लीनिंग वीडियो" data-title-en="Sofa and chair cleaning video">
+              <div class="gallery-thumb">
+                <video src="assets/gallery/sofa-cleaning.mp4" poster="assets/gallery/sofa-cleaning-1.png" aria-label="सोफा और कुर्सी क्लीनिंग वीडियो" data-i18n-aria-label="gallerySofaVideo" autoplay muted loop playsinline preload="metadata"></video>
+              </div>
+              <figcaption><span class="gallery-icon" aria-hidden="true">▶</span> <span data-i18n="gallerySofaVideo">सोफा और कुर्सी क्लीनिंग वीडियो</span></figcaption>
+            </figure>
+            <figure class="gallery-item gallery-card" tabindex="0" data-image="assets/gallery/sofa-cleaning-1.png" data-title-hi="सोफा क्लीनिंग" data-title-en="Sofa cleaning">
+              <div class="gallery-thumb">
+                <img src="assets/gallery/sofa-cleaning-1.png" alt="सोफा क्लीनिंग" data-i18n-alt="gallerySofaPhotoOne" loading="lazy" />
+              </div>
+              <figcaption><span class="gallery-icon" aria-hidden="true">🛋️</span> <span data-i18n="gallerySofaPhotoOne">सोफा क्लीनिंग</span></figcaption>
+            </figure>
+            <figure class="gallery-item gallery-card" tabindex="0" data-image="assets/gallery/sofa-cleaning-2.png" data-title-hi="कुर्सी और अपहोल्स्ट्री क्लीनिंग" data-title-en="Chair and upholstery cleaning">
+              <div class="gallery-thumb">
+                <img src="assets/gallery/sofa-cleaning-2.png" alt="कुर्सी और अपहोल्स्ट्री क्लीनिंग" data-i18n-alt="gallerySofaPhotoTwo" loading="lazy" />
+              </div>
+              <figcaption><span class="gallery-icon" aria-hidden="true">🪑</span> <span data-i18n="gallerySofaPhotoTwo">कुर्सी और अपहोल्स्ट्री क्लीनिंग</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="service-highlights section" id="service-highlights" aria-labelledby="service-highlights-title">
         <div class="container">
           <div class="section-heading">
             <div>
-              <p class="eyebrow" data-i18n="reviewsEyebrow">ग्राहक अनुभव</p>
-              <h2 id="reviews-title"><span data-i18n="reviewsTitleLead">हमारे</span> <span data-i18n="reviewsTitleAccent">रिव्यू</span></h2>
+              <p class="eyebrow" data-i18n="serviceHighlightsEyebrow">सफाई की जानकारी</p>
+              <h2 id="service-highlights-title" data-i18n="serviceHighlightsTitle">हमारी सफाई सेवाएं</h2>
             </div>
-            <p class="review-demo-notice" data-i18n="reviewsDemoNotice">डेमो रिव्यू — ये वास्तविक ग्राहक समीक्षाएं नहीं हैं।</p>
           </div>
-          <div class="review-card" aria-live="polite" aria-atomic="true">
-            <span class="review-quote-mark" aria-hidden="true">“</span>
-            <div class="review-stars" aria-label="5 में से 5 स्टार (नमूना)" data-i18n-aria-label="reviewRating">★★★★★</div>
-            <blockquote id="review-quote"></blockquote>
-            <div class="review-attribution">
-              <span class="review-avatar" aria-hidden="true" id="review-avatar"></span>
-              <span><strong id="review-name"></strong><small id="review-service"></small></span>
-              <span class="review-sample-tag" data-i18n="reviewSampleTag">नमूना</span>
+          <div class="service-highlight-card" aria-live="polite" aria-atomic="true">
+            <p class="service-highlight-description">
+              <span class="service-highlight-track">
+                <span id="service-highlight-description"></span>
+                <span id="service-highlight-copy" aria-hidden="true"></span>
+              </span>
+            </p>
+            <div class="service-highlight-attribution">
+              <span class="service-highlight-icon" aria-hidden="true">✓</span>
+              <strong id="service-highlight-name"></strong>
             </div>
-            <div class="review-controls">
-              <button type="button" id="review-previous" aria-label="पिछला रिव्यू" data-i18n-aria-label="reviewPrevious">‹</button>
-              <span id="review-count" aria-hidden="true"></span>
-              <button type="button" id="review-next" aria-label="अगला रिव्यू" data-i18n-aria-label="reviewNext">›</button>
+            <div class="service-highlight-controls">
+              <button type="button" id="highlight-previous" aria-label="पिछली सेवा" data-i18n-aria-label="highlightPrevious">‹</button>
+              <span id="highlight-count" aria-hidden="true"></span>
+              <button type="button" id="highlight-next" aria-label="अगली सेवा" data-i18n-aria-label="highlightNext">›</button>
             </div>
           </div>
         </div>
@@ -382,7 +534,7 @@
                 <span><strong data-i18n="benefitThreeTitle">लोकल सेवा</strong><small data-i18n="benefitThreeDescription">शिवपुर, वाराणसी और आसपास के लिए।</small></span>
               </div>
             </div>
-            <a class="text-link" href="#contact" data-open-contact><span data-i18n="aboutContact">कराना रावत से बात करें</span> <span>→</span></a>
+            <a class="text-link" href="contact.html"><span data-i18n="aboutContact">कराना रावत से बात करें</span> <span>→</span></a>
           </div>
         </div>
       </section>
@@ -402,13 +554,23 @@
             <a class="button button-outline" href="https://wa.me/919219059563?text=Namaste%2C%20mujhe%20service%20book%20karni%20hai." target="_blank" rel="noopener noreferrer">
               <span data-i18n="whatsappContact">WhatsApp करें</span> <span>↗</span>
             </a>
-            <a class="button button-white" href="#contact" data-open-contact>
+            <a class="button button-white" href="contact.html">
               <span data-i18n="contactUs">फॉर्म भरें</span> <span aria-hidden="true">→</span>
             </a>
           </div>
         </div>
       </section>
     </main>
+
+    <div class="gallery-modal" id="gallery-modal" aria-hidden="true">
+      <div class="gallery-modal-backdrop" data-close-gallery="true"></div>
+      <div class="gallery-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="gallery-modal-title">
+        <button class="gallery-modal-close" type="button" aria-label="Close gallery image">×</button>
+        <img id="gallery-modal-image" src="" alt="" />
+        <video id="gallery-modal-video" controls playsinline hidden></video>
+        <p id="gallery-modal-title"></p>
+      </div>
+    </div>
 
     <footer class="site-footer">
       <div class="container footer-main">
@@ -428,8 +590,10 @@
           <a href="#services" data-i18n="navServices">हमारी सेवाएं</a>
           <a href="#how-it-works" data-i18n="howItWorksNav">बुकिंग कैसे करें</a>
           <a href="#faq" data-i18n="faqNav">अक्सर पूछे जाने वाले सवाल</a>
-          <a href="#about" data-i18n="navAbout">हमारे बारे में</a>
-          <a href="#contact" data-open-contact data-i18n="navContact">संपर्क करें</a>
+          <a href="about.html" data-i18n="navAbout">हमारे बारे में</a>
+          <a href="contact.html" data-i18n="navContact">संपर्क करें</a>
+          <a href="privacy.html" data-i18n="footerPrivacy">गोपनीयता नीति</a>
+          <a href="terms.html" data-i18n="footerTerms">नियम और शर्तें</a>
         </div>
         <div class="footer-column footer-contact">
           <h2 data-i18n="contactHeading">हमसे संपर्क करें</h2>
@@ -448,78 +612,12 @@
       </div>
     </footer>
 
-    <dialog class="contact-dialog" id="contact-dialog" aria-labelledby="contact-dialog-title" aria-describedby="contact-dialog-description">
-      <div class="contact-dialog-header">
-        <div>
-          <p class="eyebrow" data-i18n="contactDialogEyebrow">बुकिंग की शुरुआत</p>
-          <h2 id="contact-dialog-title" data-i18n="contactDialogTitle">अपनी सेवा बुक करें</h2>
-          <p id="contact-dialog-description" data-i18n="contactDialogDescription">जानकारी भरें और अपनी पसंद की सेवा चुनें। अनुरोध WhatsApp पर खुलेगा।</p>
-        </div>
-        <button class="contact-dialog-close" type="button" aria-label="फॉर्म बंद करें" data-i18n-aria-label="contactDialogClose">×</button>
-      </div>
-      <div class="contact-dialog-content">
-        <form class="booking-form" id="booking-form">
-          <label class="booking-field">
-            <span data-i18n="bookingNameLabel">आपका नाम</span>
-            <input name="name" type="text" autocomplete="name" required maxlength="80" data-i18n-placeholder="bookingNamePlaceholder" placeholder="पूरा नाम" />
-          </label>
-          <label class="booking-field">
-            <span data-i18n="bookingPhoneLabel">फोन नंबर</span>
-            <input name="phone" type="tel" inputmode="tel" autocomplete="tel" required maxlength="20" data-i18n-placeholder="bookingPhonePlaceholder" placeholder="मोबाइल नंबर" />
-          </label>
-          <label class="booking-field">
-            <span data-i18n="bookingAddressLabel">इलाका / पूरा पता</span>
-            <input name="address" type="text" autocomplete="street-address" required maxlength="180" data-i18n-placeholder="bookingAddressPlaceholder" placeholder="जैसे: शिवपुर, वाराणसी" />
-          </label>
-          <fieldset class="booking-service-options">
-            <legend data-i18n="bookingServicesLegend">कौन-सी सेवाएं चाहिए? (एक से ज़्यादा चुन सकते हैं)</legend>
-            <div class="booking-service-grid">
-              <label><input type="checkbox" name="services" value="AC Service" /><span data-i18n="serviceAcTitle">AC सर्विस</span></label>
-              <label><input type="checkbox" name="services" value="Refrigerator Service" /><span data-i18n="serviceFridgeTitle">फ्रिज सर्विस</span></label>
-              <label><input type="checkbox" name="services" value="Washing Machine" /><span data-i18n="serviceWasherTitle">वॉशिंग मशीन</span></label>
-              <label><input type="checkbox" name="services" value="Oven and Chimney" /><span data-i18n="serviceKitchenTitle">ओवन और चिमनी</span></label>
-              <label><input type="checkbox" name="services" value="Car Interior" /><span data-i18n="serviceCarTitle">कार इंटीरियर</span></label>
-              <label><input type="checkbox" name="services" value="Water Tank Cleaning" /><span data-i18n="serviceTankTitle">वॉटर टैंक सफाई</span></label>
-              <label><input type="checkbox" name="services" value="Chairs and Upholstery" /><span data-i18n="serviceUpholsteryTitle">चेयर और upholstery</span></label>
-              <label><input type="checkbox" name="services" value="Other service" /><span data-i18n="bookingOtherService">अन्य सेवा</span></label>
-            </div>
-          </fieldset>
-          <label class="booking-field booking-details-field">
-            <span data-i18n="bookingDetailsLabel">ज़रूरी जानकारी (वैकल्पिक)</span>
-            <textarea name="details" rows="3" maxlength="500" data-i18n-placeholder="bookingDetailsPlaceholder" placeholder="अपनी ज़रूरत या सुविधाजनक समय बताएं"></textarea>
-          </label>
-          <button class="button button-primary booking-submit" type="submit" data-i18n="bookingSubmit">WhatsApp पर अनुरोध भेजें</button>
-          <p class="booking-form-status" id="booking-form-status" data-i18n="bookingWhatsAppReady" role="status" aria-live="polite" hidden>
-            जानकारी WhatsApp में तैयार है। अनुरोध भेजने के लिए चैट में Send दबाएं।
-          </p>
-          <a class="booking-whatsapp-link" id="booking-whatsapp-link" target="_blank" rel="noopener noreferrer" hidden>
-            <span data-i18n="bookingWhatsAppLink">WhatsApp चैट खोलें</span> <span aria-hidden="true">↗</span>
-          </a>
-        </form>
-        <aside class="contact-map-panel">
-          <h3 data-i18n="contactMapTitle">हमारा सेवा क्षेत्र</h3>
-          <p data-i18n="contactMapLocation">शिवपुर, वाराणसी और आसपास</p>
-          <iframe
-            title="शिवपुर, वाराणसी का नक्शा"
-            data-i18n-title="contactMapFrameTitle"
-            src="https://www.google.com/maps?q=Shivpur%2C%20Varanasi%2C%20Uttar%20Pradesh&output=embed"
-            loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-          <a href="https://www.google.com/maps/search/?api=1&query=Shivpur%2C%20Varanasi%2C%20Uttar%20Pradesh" target="_blank" rel="noopener noreferrer">
-            <span data-i18n="contactMapDirections">Google Maps में देखें</span> <span aria-hidden="true">↗</span>
-          </a>
-        </aside>
-      </div>
-    </dialog>
-
     <a class="whatsapp-float" href="https://wa.me/919219059563?text=Namaste%2C%20mujhe%20cleaning%20service%20book%20karni%20hai." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp पर बुकिंग करें" data-i18n-aria-label="whatsappBooking">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 2 17.7L.5 23l5.4-1.4a11.8 11.8 0 0 0 5.6 1.4h.1A11.8 11.8 0 0 0 23.4 11a11.7 11.7 0 0 0-2.9-7.5ZM11.6 21a9.8 9.8 0 0 1-5-.0l-.4-.2-3.2.8.9-3.1-.2-.4A9.8 9.8 0 1 1 11.6 21Zm5.4-7.3c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.5-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.4.1-.6l.5-.5.3-.5c.1-.2 0-.4 0-.5-.1-.2-.7-1.6-1-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.1 3c.2.2 2 3.1 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.3-.6-.5Z" /></svg>
     </a>
     <a class="call-float" href="tel:+919219059563" aria-label="अभी कॉल करें: +91 92190 59563" data-i18n-aria-label="callBooking">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.2 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1v3.5a1 1 0 0 1-1 1A17.5 17.5 0 0 1 2.7 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .6 3.6 1 1 0 0 1-.2 1l-2 2.2Z" /></svg>
     </a>
-    <script src="script.js?v=14"></script>
+    <script src="script.js?v=21"></script>
   </body>
 </html>
