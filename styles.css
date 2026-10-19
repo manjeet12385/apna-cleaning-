@@ -2787,6 +2787,10 @@ button {
 
 /* 3. Tablets Portrait & Mobile Landscape (Max 768px) */
 @media (max-width: 768px) {
+  .top-announcement {
+    display: none;
+  }
+
   body {
     padding-bottom: 70px; /* Space for fixed bottom bar */
   }
