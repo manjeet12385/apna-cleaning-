@@ -11,6 +11,11 @@ const contentTypes = {
   ".js": "text/javascript; charset=utf-8",
   ".mp4": "video/mp4",
   ".png": "image/png",
+  ".jpg": "image/jpeg",
+  ".jpeg": "image/jpeg",
+  ".webp": "image/webp",
+  ".svg": "image/svg+xml",
+  ".ico": "image/x-icon",
 };
 
 const server = http.createServer((request, response) => {
@@ -47,6 +52,9 @@ const server = http.createServer((request, response) => {
     response.writeHead(200, {
       "Content-Type": contentTypes[path.extname(filePath)] || "application/octet-stream",
       "X-Content-Type-Options": "nosniff",
+      "Cache-Control": "no-cache, no-store, must-revalidate",
+      "Pragma": "no-cache",
+      "Expires": "0",
     });
     response.end(request.method === "HEAD" ? undefined : content);
   });

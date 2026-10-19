@@ -38,6 +38,8 @@ const serviceCopy = {
     contactHeading: "हमसे संपर्क करें",
     contactPrompt: "बुकिंग और जानकारी के लिए कॉल करें",
     whatsappMessage: "WhatsApp पर मैसेज करें",
+    callNowShort: "कॉल करें",
+    whatsappShort: "WhatsApp",
     copyright: "Apna Cleaning Service. All rights reserved.",
     madeWithCare: "Made with care in Varanasi",
     messageStart: "नमस्ते, मुझे यह service चाहिए:",
@@ -83,6 +85,8 @@ const serviceCopy = {
     contactHeading: "Get in touch",
     contactPrompt: "Call for bookings and information",
     whatsappMessage: "Message us on WhatsApp",
+    callNowShort: "Call Us",
+    whatsappShort: "WhatsApp",
     copyright: "Apna Cleaning Service. All rights reserved.",
     madeWithCare: "Made with care in Varanasi",
     messageStart: "Hello, I am interested in this service:",
@@ -94,7 +98,7 @@ const serviceCopy = {
 const services = {
   ac: {
     icon: "AC",
-    image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=85",
+    image: "assets/gallery/ac-cleaning.jpg",
     hi: {
       title: "AC क्लीनिंग",
       imageAlt: "घर में एयर कंडीशनर के पास सफाई और देखभाल",
@@ -142,7 +146,7 @@ const services = {
   },
   washer: {
     icon: "WM",
-    image: "https://images.unsplash.com/photo-1585518419759-7fe2e0fbf8a6?auto=format&fit=crop&w=1200&q=85",
+    image: "assets/gallery/washing-machine.jpg",
     hi: {
       title: "वॉशिंग मशीन क्लीनिंग",
       imageAlt: "वॉशिंग मशीन और laundry care",
@@ -190,7 +194,7 @@ const services = {
   },
   "deep-cleaning": {
     icon: "HOME",
-    image: "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1200&q=85",
+    image: "assets/service-images/move-in-out-cleaning.jpg",
     hi: {
       title: "हाउस डिप क्लीनिंग",
       imageAlt: "घर की गहरी सफाई और room care",
@@ -214,7 +218,7 @@ const services = {
   },
   apartment: {
     icon: "APT",
-    image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=85",
+    image: "assets/service-images/move-in-out-cleaning.jpg",
     hi: {
       title: "अपार्टमेंट क्लीनिंग",
       imageAlt: "अपार्टमेंट के room और kitchen की सफाई",
@@ -262,7 +266,7 @@ const services = {
   },
   glass: {
     icon: "GLS",
-    image: "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=85",
+    image: "assets/service-images/move-in-out-cleaning.jpg",
     hi: {
       title: "ग्लास एंड विंडो क्लीनिंग",
       imageAlt: "खिड़की और glass की सफाई",
@@ -310,7 +314,7 @@ const services = {
   },
   car: {
     icon: "CAR",
-    image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=85",
+    image: "assets/service-images/car-cleaning.jpg",
     hi: {
       title: "कार इंटीरियर क्लीनिंग",
       imageAlt: "कार के अंदर की सीटों की सफाई",
@@ -358,7 +362,7 @@ const services = {
   },
   upholstery: {
     icon: "FABRIC",
-    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1200&q=85",
+    image: "assets/gallery/sofa-after.jpg",
     hi: {
       title: "चेयर और अपहोल्स्ट्री क्लीनिंग",
       imageAlt: "सोफे और upholstery fabric की सफाई",
@@ -382,7 +386,7 @@ const services = {
   },
   sofa: {
     icon: "SOFA",
-    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1200&q=85",
+    image: "assets/gallery/sofa-cleaning-1.png",
     hi: {
       title: "सोफा क्लीनिंग",
       imageAlt: "सोफे की upholstery की सफाई",
